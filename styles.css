@@ -1657,8 +1657,27 @@ h3[lang="zh-Hant"],
   object-position: center 42%;
 }
 
-.photo-strip-meet .photo-open {
+.photo-strip-meet .photo-open,
+.photo-wide {
   aspect-ratio: 4 / 3;
+}
+
+.photo-wide {
+  display: block;
+  width: 100%;
+  margin: 0.9rem 0 0;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: #101c26;
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.photo-wide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
 }
 
 .photo-dialog {
@@ -1722,7 +1741,8 @@ h3[lang="zh-Hant"],
   }
 
   .photo-strip-pair .photo-open,
-  .photo-strip-meet .photo-open {
+  .photo-strip-meet .photo-open,
+  .photo-wide {
     aspect-ratio: 4 / 3;
   }
 }

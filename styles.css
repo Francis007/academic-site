@@ -264,19 +264,20 @@ html[data-lang="zh"] .only-en {
 
 .hero {
   display: grid;
-  grid-template-columns: 320px minmax(0, 1fr);
+  grid-template-columns: 280px minmax(0, 1fr);
   gap: 3.4rem;
   align-items: center;
-  padding: 3.1rem 0 2.15rem;
+  padding: 2.6rem 0 2.15rem;
 }
 
 .portrait {
-  width: 320px;
-  height: 320px;
-  object-fit: cover;
+  width: 280px;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
   object-position: center center;
   display: block;
-  background: #f2f2f2;
+  background: transparent;
 }
 
 .hero-copy h1 {
@@ -879,9 +880,9 @@ html[data-lang="zh"] .only-en {
   }
 
   .portrait {
-    width: min(280px, 78vw);
+    width: min(250px, 68vw);
     height: auto;
-    aspect-ratio: 1;
+    aspect-ratio: 3 / 4;
   }
 
   .hero-copy h1 {

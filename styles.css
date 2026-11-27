@@ -1645,6 +1645,22 @@ h3[lang="zh-Hant"],
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.photo-open img.pos-aps-group {
+  object-position: center 58%;
+}
+
+.photo-open img.pos-aps-cert {
+  object-position: center 46%;
+}
+
+.photo-open img.pos-aps-talk {
+  object-position: center 42%;
+}
+
+.photo-strip-meet .photo-open {
+  aspect-ratio: 4 / 3;
+}
+
 .photo-dialog {
   width: min(920px, calc(100vw - 2rem));
   max-height: calc(100vh - 2rem);
@@ -1705,7 +1721,8 @@ h3[lang="zh-Hant"],
     aspect-ratio: 3 / 4;
   }
 
-  .photo-strip-pair .photo-open {
+  .photo-strip-pair .photo-open,
+  .photo-strip-meet .photo-open {
     aspect-ratio: 4 / 3;
   }
 }

@@ -453,6 +453,14 @@ html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
   padding: 0.38rem 0.55rem;
 }
 
+.chips li.chip-ieee {
+  color: var(--brass-deep);
+  background: #f8f1e4;
+  border-color: #c9a56a;
+  font-weight: 600;
+  letter-spacing: 0.045em;
+}
+
 .bio {
   margin-top: 1.15rem;
   max-width: 42rem;
@@ -860,6 +868,13 @@ article[id] {
   border-color: #c5ddd4;
 }
 
+.badge-cert {
+  color: var(--brass-deep);
+  background: #f8f1e4;
+  border-color: #c9a56a;
+  letter-spacing: 0.06em;
+}
+
 .year-pill {
   font-family: var(--mono);
   font-size: 0.72rem;
@@ -926,6 +941,10 @@ article[id] {
 }
 
 .award-grid > li:last-child {
+  grid-column: 1 / -1;
+}
+
+.award-lead {
   grid-column: 1 / -1;
 }
 
@@ -1524,6 +1543,13 @@ html[data-theme="dark"] .chips li {
   color: #d5f3ea;
 }
 
+html[data-theme="dark"] .chips li.chip-ieee,
+html[data-theme="dark"] .badge-cert {
+  background: #3a2e1c;
+  border-color: #e4c98a;
+  color: #f3ddb0;
+}
+
 html[data-theme="dark"] .plate {
   border-color: #3d6458;
   box-shadow: 0 0 0 1px rgba(228, 201, 138, 0.28), 0 22px 48px rgba(0, 0, 0, 0.4);
@@ -1746,6 +1772,82 @@ html[data-lang="zh"] .role {
   padding: 0.85rem 1rem 1rem;
   font-size: 0.95rem;
   line-height: 1.55;
+}
+
+.photo-dialog img.is-doc {
+  width: auto;
+  max-width: min(100%, 42rem);
+  max-height: min(82vh, 1040px);
+  margin-inline: auto;
+  background: #fbf7f0;
+}
+
+.award-cert {
+  display: grid;
+  grid-template-columns: 8.6rem minmax(0, 1fr);
+  gap: 0.2rem 1.45rem;
+  align-items: center;
+}
+
+.award-cert-copy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.award-cert h3 {
+  max-width: 42rem;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+@media (min-width: 761px) {
+  br.br-sm {
+    display: none;
+  }
+}
+
+.photo-open.cert-thumb {
+  width: 8.6rem;
+  height: auto;
+  aspect-ratio: auto;
+  padding: 0.28rem;
+  border: 1px solid var(--line-strong);
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1px rgba(141, 100, 48, 0.38);
+}
+
+.photo-open.cert-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 990 / 1400;
+  object-fit: contain;
+  object-position: center center;
+  background: #fff;
+}
+
+@media (max-width: 760px) {
+  .award-lead {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .award-cert {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 0.85rem;
+  }
+
+  .photo-open.cert-thumb {
+    width: 7.4rem;
+    height: auto;
+    aspect-ratio: auto;
+  }
 }
 
 .photo-dialog-close {

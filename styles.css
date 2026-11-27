@@ -1633,6 +1633,18 @@ h3[lang="zh-Hant"],
   object-position: center 16%;
 }
 
+.photo-open img.pos-group {
+  object-position: center 22%;
+}
+
+.photo-open img.pos-brief {
+  object-position: center 46%;
+}
+
+.photo-strip-pair {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .photo-dialog {
   width: min(920px, calc(100vw - 2rem));
   max-height: calc(100vh - 2rem);
@@ -1691,5 +1703,9 @@ h3[lang="zh-Hant"],
 
   .photo-open {
     aspect-ratio: 3 / 4;
+  }
+
+  .photo-strip-pair .photo-open {
+    aspect-ratio: 4 / 3;
   }
 }

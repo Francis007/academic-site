@@ -4,18 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Awards | Chien-Hung Chen</title>
-    <link rel="canonical" href="https://francis007.github.io/academic-site/#awards">
-    <meta name="description" content="Recent team and research honors.">
+    <link rel="canonical" href="https://francis007.github.io/academic-site/#honor">
+    <meta name="description" content="Honors, certifications, and recent news.">
     <link rel="stylesheet" href="../styles.css">
-    <noscript><meta http-equiv="refresh" content="0; url=../#awards"></noscript>
+    <noscript><meta http-equiv="refresh" content="0; url=../#honor"></noscript>
     <script>
       var known = {
-        "#awards": 1,
-        "#entrepreneurial-innovation": 1,
-        "#outstanding-poster": 1,
-        "#shield-cup": 1
+        "#awards": "#honor",
+        "#honor": "#honor",
+        "#entrepreneurial-innovation": "#entrepreneurial-innovation",
+        "#outstanding-poster": "#outstanding-poster",
+        "#shield-cup": "#shield-cup",
+        "#aiea-associate": "#aiea-associate"
       };
-      location.replace("../" + (known[location.hash] ? location.hash : "#awards"));
+      location.replace("../" + (known[location.hash] || "#honor"));
     </script>
   </head>
   <body>
@@ -23,8 +25,10 @@
       <div class="redirect-card">
         <p class="eyebrow">Awards</p>
         <h1>Honors &amp; awards</h1>
-        <p>Recent team and research honors are listed on the faculty homepage.</p>
+        <p>Honors, certifications, and 2026 news are listed on the faculty homepage.</p>
         <ul>
+          <li><a href="../#honor">Honors &amp; certifications</a></li>
+          <li><a href="../#aiea-associate">AIEA Associate certificate</a></li>
           <li><a href="../#entrepreneurial-innovation">Third Place · Entrepreneurial Innovation Competition</a></li>
           <li><a href="../#outstanding-poster">Outstanding Poster Paper Award</a></li>
           <li><a href="../#shield-cup">Best Paper Award and Creativity Award · Shield Cup</a></li>

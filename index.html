@@ -53,7 +53,12 @@
         ],
         "email": "francischen@go.isu.edu.tw",
         "url": "https://francis007.github.io/academic-site/",
-        "sameAs": ["https://orcid.org/0000-0003-4514-1504"],
+        "image": "https://francis007.github.io/academic-site/images/portrait.jpg",
+        "telephone": "+886-7-6577711",
+        "sameAs": [
+          "https://orcid.org/0000-0003-4514-1504",
+          "https://ene.isu.edu.tw/teachers/1B402"
+        ],
         "affiliation": [
           {
             "@type": "CollegeOrUniversity",
@@ -102,6 +107,7 @@
           <ul class="nav-links" id="site-nav">
             <li><a class="is-active" href="#about" aria-current="true"><span data-i18n="nav.about">About</span></a></li>
             <li><a href="#research"><span data-i18n="nav.research">Research</span></a></li>
+            <li><a href="#grants"><span data-i18n="nav.grants">Grants</span></a></li>
             <li><a href="#publications"><span data-i18n="nav.publications">Publications</span></a></li>
             <li><a href="#awards"><span data-i18n="nav.awards">Awards</span></a></li>
             <li><a href="#activities"><span data-i18n="nav.activities">Activities</span></a></li>
@@ -139,7 +145,22 @@
               <a href="#awards"><span data-i18n="link.awards">Honors &amp; awards</span> <span aria-hidden="true">→</span></a>
             </p>
           </div>
-          <figure class="plate">
+          <div class="hero-visual">
+            <figure class="portrait-frame">
+              <img
+                src="images/portrait.jpg"
+                width="796"
+                height="828"
+                alt="Official faculty portrait of Professor Chien-Hung Chen, I-Shou University"
+                data-alt-en="Official faculty portrait of Professor Chien-Hung Chen, I-Shou University"
+                data-alt-zh="義守大學陳建宏教授官方教職肖像"
+              >
+              <figcaption>
+                <span data-i18n="portrait.label">Portrait</span>
+                <span data-i18n="portrait.caption">Official faculty portrait</span>
+              </figcaption>
+            </figure>
+            <figure class="plate">
             <svg viewBox="0 0 660 620" fill="none" aria-hidden="true" focusable="false">
     <defs>
       <radialGradient id="plate-bg" cx="46%" cy="40%" r="78%">
@@ -199,6 +220,58 @@
   </svg>
             <figcaption><span data-i18n="fig.label">FIG. 01</span> <span data-i18n="fig.caption">Conceptual antenna radiation pattern</span></figcaption>
           </figure>
+          </div>
+        </div>
+        <div class="wrap background" id="background">
+          <header class="section-head">
+            <p class="eyebrow"><span data-i18n="bg.eyebrow">Background</span></p>
+            <h2 data-i18n="bg.title">Academic background</h2>
+          </header>
+          <div class="bg-grid">
+            <section>
+              <h3 data-i18n="bg.edu">Education</h3>
+              <ul>
+                <li>
+                  <span class="only-en">Ph.D. in Electrical Engineering, National Kaohsiung University of Science and Technology</span>
+                  <span class="only-zh" lang="zh-Hant">國立高雄科技大學電機工程博士</span>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h3 data-i18n="bg.exp">Experience</h3>
+              <ul>
+                <li>
+                  <span class="only-en">Professor, Department of Electronic Engineering, and Jointly Appointed Professor, Department of Computer Science and Information Engineering, I-Shou University</span>
+                  <span class="only-zh" lang="zh-Hant">義守大學電子工程學系教授、資訊工程學系合聘教授</span>
+                </li>
+                <li>
+                  <span class="only-en">Department Chair, 2019–2025; Professor, Associate Professor, Assistant Professor, and Lecturer, Department of Avionics Engineering, ROC Air Force Academy</span>
+                  <span class="only-zh" lang="zh-Hant">空軍軍官學校航空電子工程學系講師、助理教授、副教授、教授；系主任（2019–2025）</span>
+                </li>
+                <li>
+                  <span class="only-en">Visiting Scholar, Department of Electrical and Computer Engineering, University of Florida</span>
+                  <span class="only-zh" lang="zh-Hant">美國佛羅里達大學電機電腦系訪問學者</span>
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h3 data-i18n="bg.spec">Research specialties</h3>
+              <ul>
+                <li>
+                  <span class="only-en">Antenna &amp; Array Design</span>
+                  <span class="only-zh" lang="zh-Hant">天線設計</span>
+                </li>
+                <li>
+                  <span class="only-en">Radar Systems &amp; Target Detection</span>
+                  <span class="only-zh" lang="zh-Hant">雷達系統與目標偵測</span>
+                </li>
+                <li>
+                  <span class="only-en">Cyber-EM Integration</span>
+                  <span class="only-zh" lang="zh-Hant">資安與防護整合</span>
+                </li>
+              </ul>
+            </section>
+          </div>
         </div>
       </section>
 
@@ -261,6 +334,149 @@
               <a class="pillar-link" href="#pub-edu"><span data-i18n="research.jump">Related paper</span> <span aria-hidden="true">→</span></a>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section class="section" id="grants" tabindex="-1" aria-labelledby="grants-title">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="eyebrow"><span data-i18n="grant.eyebrow">Funded research</span></p>
+            <h2 id="grants-title" data-i18n="grant.title">Grants</h2>
+            <p class="lede" data-i18n="grant.lede">Six NSTC grants, five Ministry of Education projects, one industry–academia collaboration with Paramtek Inc., and one other external project.</p>
+          </header>
+          <ul class="grant-stats" aria-label="Portfolio">
+            <li><span data-i18n="grant.stat.nstc">6 NSTC</span></li>
+            <li><span data-i18n="grant.stat.moe">5 MOE</span></li>
+            <li><span data-i18n="grant.stat.ind">1 industry–academia</span></li>
+            <li><span data-i18n="grant.stat.ext">1 external</span></li>
+          </ul>
+          <ul class="grant-grid">
+            <li class="grant-card">
+              <p class="meta"><span class="badge badge-live" data-i18n="grant.active">Active</span> <span>2025.08–2027.07</span> · <span data-i18n="grant.nstc">NSTC</span></p>
+              <h3>
+                <span class="only-en">Multi-radar integration for detecting and localizing ultra-low radar-cross-section UAVs</span>
+                <span class="only-zh" lang="zh-Hant">多雷達整合對極低雷達截面積無人機之偵測與定位策略研究</span>
+              </h3>
+            </li>
+            <li class="grant-card">
+              <p class="meta"><span class="badge badge-live" data-i18n="grant.active">Active</span> <span>2026.04–2026.12</span> · <span data-i18n="grant.cardInd">Industry</span></p>
+              <h3>
+                <span class="only-en">UAV antenna design</span>
+                <span class="only-zh" lang="zh-Hant">無人機天線設計</span>
+              </h3>
+              <p class="grant-note">
+                <span class="only-en">Paramtek Inc.</span>
+                <span class="only-zh" lang="zh-Hant">拚願科技股份有限公司（Paramtek Inc.）</span>
+              </p>
+            </li>
+            <li class="grant-card">
+              <p class="meta"><span class="badge badge-live" data-i18n="grant.active">Active</span> <span>2025.10–2026.12</span> · <span data-i18n="grant.nstc">NSTC</span></p>
+              <h3>
+                <span class="only-en">High-sensitivity antenna system and field verification (2/2)</span>
+                <span class="only-zh" lang="zh-Hant">高靈敏度天線系統與場域驗證研究（2/2）</span>
+              </h3>
+            </li>
+          </ul>
+          <details class="fold print-open">
+            <summary>
+              <span class="fold-title" data-i18n="grant.full">Full grant record, 2022–2027</span>
+              <span class="fold-count" data-i18n="grant.fullCount">13 projects</span>
+            </summary>
+            <ol class="record-list">
+              <li>
+                <span class="record-when">2026.04–2026.12</span>
+                <span class="record-body">
+                  <span class="record-kind" data-i18n="grant.industry">Industry–academia</span>
+                  <span class="record-name"><span class="only-en">UAV antenna design</span><span class="only-zh" lang="zh-Hant">無人機天線設計</span></span>
+                  <span class="record-note"><span class="only-en">Paramtek Inc.</span><span class="only-zh" lang="zh-Hant">拚願科技股份有限公司（Paramtek Inc.）</span></span>
+                </span>
+              </li>
+              <li>
+                <span class="record-when">2025.10–2026.12</span>
+                <span class="record-body">
+                  <span class="record-kind" data-i18n="grant.nstc">NSTC</span>
+                  <span class="record-name"><span class="only-en">High-sensitivity antenna system and field verification (2/2)</span><span class="only-zh" lang="zh-Hant">高靈敏度天線系統與場域驗證研究（2/2）</span></span>
+                </span>
+              </li>
+              <li>
+                <span class="record-when">2025.08–2027.07</span>
+                <span class="record-body">
+                  <span class="record-kind" data-i18n="grant.nstc">NSTC</span>
+                  <span class="record-name"><span class="only-en">Multi-radar integration for detecting and localizing ultra-low radar-cross-section UAVs</span><span class="only-zh" lang="zh-Hant">多雷達整合對極低雷達截面積無人機之偵測與定位策略研究</span></span>
+                </span>
+              </li>
+              <li>
+                <span class="record-when">2025.08–2026.01</span>
+                <span class="record-body">
+                  <span class="record-kind" data-i18n="grant.moe">Ministry of Education</span>
+                  <span class="record-name"><span class="only-en">Teaching-practice research: AI and cross-disciplinary communications practice courses for officers’ digital literacy</span><span class="only-zh" lang="zh-Hant">人工智慧與跨領域通訊實作課程—提升軍官數位素養之教學實踐研究</span></span>
+                </span>
+              </li>
+              <li>
+                <span class="record-when">2024.10–2025.12</span>
+                <span class="record-body">
+                  <span class="record-kind" data-i18n="grant.nstc">NSTC</span>
+                  <span class="record-name"><span class="only-en">High-sensitivity antenna system and field verification (1/2)</span><span class="only-zh" lang="zh-Hant">高靈敏度天線系統與場域驗證研究（1/2）</span></span>
+                </span>
+              </li>
+              <li>
+                <span class="record-when">2024.08–2025.10</span>
+                <span class="record-body">
+                  <span class="record-kind" data-i18n="grant.nstc">NSTC</span>
+                  <span class="record-name"><span class="only-en">Sampling and analysis of specified ultra-low radar-cross-section aircraft</span><span class="only-zh" lang="zh-Hant">特定極低雷達截面積飛行器數據採樣研究與分析</span></span>
+                </span>
+              </li>
+              <li>
+                <span class="record-when">2024.08–2025.07</span>
+                <span class="record-body">
+                  <span class="record-kind" data-i18n="grant.moe">Ministry of Education</span>
+                  <span class="record-name"><span class="only-en">Active-array scanning systems in communications courses at military academies</span><span class="only-zh" lang="zh-Hant">結合主動陣列掃描系統使用於軍事院校通訊領域課程</span></span>
+                </span>
+              </li>
+              <li>
+                <span class="record-when">2023.12–2025.01</span>
+                <span class="record-body">
+                  <span class="record-kind" data-i18n="grant.moe">Ministry of Education</span>
+                  <span class="record-name"><span class="only-en">Teaching-practice research on digital resilience and diverse radar-course experiments</span><span class="only-zh" lang="zh-Hant">建構數位韌性與多樣化雷達學課程實驗之教學實踐研究</span></span>
+                </span>
+              </li>
+              <li>
+                <span class="record-when">2023.10–2024.12</span>
+                <span class="record-body">
+                  <span class="record-kind" data-i18n="grant.nstc">NSTC</span>
+                  <span class="record-name"><span class="only-en">High-sensitivity antenna system study (2/2)</span><span class="only-zh" lang="zh-Hant">高靈敏度天線系統研究（2/2）</span></span>
+                </span>
+              </li>
+              <li>
+                <span class="record-when">2022.10–2023.12</span>
+                <span class="record-body">
+                  <span class="record-kind" data-i18n="grant.nstc">NSTC</span>
+                  <span class="record-name"><span class="only-en">High-sensitivity antenna system study (1/2)</span><span class="only-zh" lang="zh-Hant">高靈敏度天線系統研究（1/2）</span></span>
+                </span>
+              </li>
+              <li>
+                <span class="record-when">2022.08–2025.07</span>
+                <span class="record-body">
+                  <span class="record-kind" data-i18n="grant.moe">Ministry of Education</span>
+                  <span class="record-name"><span class="only-en">STEM and women-in-R&amp;D talent program: advanced defense technical training for women cadets</span><span class="only-zh" lang="zh-Hant">STEM領域及女性研發人才培育計畫—培育女軍校生高度國防專業技術計畫</span></span>
+                </span>
+              </li>
+              <li>
+                <span class="record-when">2022.08–2023.07</span>
+                <span class="record-body">
+                  <span class="record-kind" data-i18n="grant.moe">Ministry of Education</span>
+                  <span class="record-name"><span class="only-en">Radar practice course: UAV radar cross section</span><span class="only-zh" lang="zh-Hant">雷達學實作課程—無人載具雷達截面積研究</span></span>
+                </span>
+              </li>
+              <li>
+                <span class="record-when">2022.01–2024.12</span>
+                <span class="record-body">
+                  <span class="record-kind" data-i18n="grant.external">External project</span>
+                  <span class="record-name"><span class="only-en">High-gain array antenna design and electromagnetic reflection of three-dimensional objects</span><span class="only-zh" lang="zh-Hant">高增益陣列天線系統設計與三維物體電波反射值研究</span></span>
+                </span>
+              </li>
+            </ol>
+          </details>
         </div>
       </section>
 
@@ -413,6 +629,44 @@
               </div>
             </li>
           </ol>
+          <aside class="patent" id="patent">
+            <p class="eyebrow"><span data-i18n="patent.eyebrow">U.S. Patent</span></p>
+            <p class="patent-no"><a href="https://patents.google.com/patent/US8633857B2">US8633857B2</a></p>
+            <h3 lang="en">Antenna Structure</h3>
+            <p class="patent-meta"><span data-i18n="patent.term">2010–2032</span> · <span data-i18n="patent.country">United States</span></p>
+            <p class="patent-dates">2010-11-02 – 2032-05-22</p>
+            <p class="patent-inventors"><span data-i18n="patent.inv">Inventors</span> Yang-Kai Wang, Chien-Hung Chen, Shu-An Yeh, Yu-Chang Lai</p>
+          </aside>
+          <details class="fold print-open" id="earlier-papers">
+            <summary>
+              <span class="fold-title" data-i18n="pub.earlier">Selected earlier journal &amp; conference papers</span>
+              <span class="fold-count" data-i18n="pub.earlier.count">11 journals · 4 conferences</span>
+            </summary>
+            <div class="fold-body">
+              <p class="fold-note" data-i18n="pub.earlier.note">The faculty page lists 14 journal papers, including IEEE TAP, IEEE AWPL, IEEE Access, and IEEE J. RFID. The three 2026 journal articles are featured above. Earlier journal papers and four international conference papers follow.</p>
+              <h3 class="fold-label" data-i18n="pub.journals">Journal papers</h3>
+              <ol class="cite-list" lang="en">
+                <li><span class="cite-year">2025</span><p><span class="cite-title">Low Profile Planar Inverted-L Antenna (PILA) for UHF RFID Tag on Signal Absorption and Reflection Surfaces</span> Minh-Tan Nguyen, Yi-Fang Lin, Chien-Hung Chen, Hoang-Son Luong, Hua-Ming Chen. <span class="cite-venue">IEEE Access</span>, vol. 13, pp. 19560–19575, 2025.01.</p></li>
+                <li><span class="cite-year">2024</span><p><span class="cite-title">Antenna in Package with Tapered Radiation Patches and Parasitic Strips for Automotive Radar</span> Ming-Lung Kung, Jain-Yu Yu, Ken-Huang Lin, Chien-Hung Chen, Hung-Hsiang Cheng, Cheng-Yu Wu, Yun-Hsiang Tien, Yi-Chuan Ding. <span class="cite-venue">IEEE Antennas and Wireless Propagation Letters</span>, vol. 23, no. 10, pp. 2845–2849, 2024.10.</p></li>
+                <li><span class="cite-year">2024</span><p><span class="cite-title">Dual-Polarized Spline-Loop Antenna Array With Tilt Angle Radiation for 5G Base Stations</span> Yi-Fang Lin, Chin-Cheng Chang, Chien-Hung Chen, Jia-You Xie, Yong-Xiang Zhuang, Hua-Ming Chen. <span class="cite-venue">IEEE Access</span>, vol. 12, pp. 138280–138290, 2024.09.</p></li>
+                <li><span class="cite-year">2024</span><p><span class="cite-title">Low-profile wideband miniaturized tag antenna mounted on the human body</span> Minh-Tan Nguyen, Yi-Fang Lin, Chien-Hung Chen, Chin-Cheng Chang, Hua-Ming Chen. <span class="cite-venue">International Journal of Microwave and Wireless Technologies</span>, vol. 16, no. 2, pp. 189–202, 2024.03.</p></li>
+                <li><span class="cite-year">2022</span><p><span class="cite-title">Miniature 3D-Dipole Antenna for UHF RFID Tag Mounted on Conductive Materials</span> Minh-Tan Nguyen, Yi-Fang Lin, Chien-Hung Chen, Ying-Chih Tseng, Hua-Ming Chen. <span class="cite-venue">IEEE Transactions on Antennas and Propagation</span>, vol. 70, no. 12, pp. 11454–11464, 2022.12.</p></li>
+                <li><span class="cite-year">2021</span><p><span class="cite-title">Shorted Patch Antenna With Multi Slots for a UHF RFID Tag Attached to a Metallic Object</span> Minh-Tan Nguyen, Yi-Fang Lin, Chien-Hung Chen, Chun-Hsien Chang, Hua-Ming Chen. <span class="cite-venue">IEEE Access</span>, vol. 9, pp. 111277–111292, 2021.08.</p></li>
+                <li><span class="cite-year">2021</span><p><span class="cite-title">Compact shorted C-shaped patch antenna for ultrahigh frequency radio frequency identification tags mounted on a metallic plate</span> Minh-Tan Nguyen, Yi-Fang Lin, Chun-Hsien Chang, Chien-Hung Chen, Hua-Ming Chen. <span class="cite-venue">International Journal of RF and Microwave Computer-Aided Engineering</span>, vol. 31, no. 3, e22595, 2021.03.</p></li>
+                <li><span class="cite-year">2020</span><p><span class="cite-title">Design of multi-band antenna for LTE wearable device with shared slots and radiators for smart watch</span> Chien-Hung Chen, Yi-Fang Lin, Po-Wei Huang, Hua-Ming Chen, Chia-Te Liao. <span class="cite-venue">International Journal of RF and Microwave Computer-Aided Engineering</span>, vol. 30, no. 11, e22415, 2020.11.</p></li>
+                <li><span class="cite-year">2019</span><p><span class="cite-title">High-gain MIMO dipole antennas with mechanical steerable main beam for 5G small cell</span> Yi-Fang Lin, Wei-Chih Chen, Chien-Hung Chen, Chia-Te Liao, Nien-Chao Chuang, Hua-Ming Chen. <span class="cite-venue">IEEE Antennas and Wireless Propagation Letters</span>, vol. 18, no. 7, pp. 1317–1321, 2019.05.</p></li>
+                <li><span class="cite-year">2019</span><p><span class="cite-title">Dual open-slot antennas integrated in metal frame and metal case of tablet computer for long-term evolution applications</span> Yi-Fang Lin, Chien-Hung Chen, Chia-Te Liao, Chow-Yen-Desmond Sim, Chia-Cheng Tseng, Hua-Ming Chen. <span class="cite-venue">International Journal of RF and Microwave Computer-Aided Engineering</span>, vol. 29, no. 1, e21496, 2019.01.</p></li>
+                <li><span class="cite-year">2018</span><p><span class="cite-title">Low-Profile CP RFID Hard Tag Antenna with Short-Circuited Microstrip-Fed Line mounted on Metallic Plane</span> Chien-Hung Chen, Shih-Ting Huang. <span class="cite-venue">International Journal of RF and Microwave Computer-Aided Engineering</span>, vol. 28, no. 9, e21504, 2018.11.</p></li>
+              </ol>
+              <h3 class="fold-label" data-i18n="pub.conferences">Conference papers</h3>
+              <ol class="cite-list" lang="en">
+                <li><span class="cite-year">2026</span><p><span class="cite-title">Monostatic Radar Cross Section of a 135-g Ducted-Propeller Micro UAV at 2.9 GHz: An MLFMM Study of Duct-Aperture Scattering</span> Chien-Hung Chen, Chia-Te Liao, Hua-Ming Chen. <span class="cite-venue">2026 IEEE International Workshop on Electromagnetics: Applications and Student Innovation Competition (iWEM 2026)</span>, Tokyo, Japan, 2026.08.</p></li>
+                <li><span class="cite-year">2026</span><p><span class="cite-title">A Low-Profile Metal-Integrated WiFi 6E/7 MIMO Antenna Design for Laptop Applications</span> Shu-Chuan Chen, Chien-Hung Chen, Jia-Yi Hou, Chi-Wen Huang, Shih-Wei Yu. <span class="cite-venue">2026 IEEE International Workshop on Electromagnetics: Applications and Student Innovation Competition (iWEM 2026)</span>, Tokyo, Japan, 2026.08.</p></li>
+                <li><span class="cite-year">2025</span><p><span class="cite-title">Enhancing Small Drone Detection: A Comparative Analysis of EM Simulations and AESA Radar</span> Chien-Hung Chen, Chin-Cheng Chang, Hua-Ming Chen. <span class="cite-venue">2025 IEEE International Symposium on Antennas &amp; Propagation and North American Radio Science Meeting</span>, Ottawa, Canada, 2025.07.</p></li>
+                <li><span class="cite-year">2025</span><p><span class="cite-title">Design of a High-Efficiency Circularly Polarized Rectenna and Transmitting Antenna Array for 2.45 GHz Energy Harvesting System</span> Chien-Hung Chen, Yi-Fang Lin, Yi-Ray Chen, Hua-Ming Chen, Chia-Te Liao. <span class="cite-venue">2025 Asia-Pacific International Symposium and Exhibition on Electromagnetic Compatibility (APEMC)</span>, Taipei, Taiwan, 2025.05.</p></li>
+              </ol>
+            </div>
+          </details>
         </div>
       </section>
 
@@ -485,6 +739,116 @@
               </article>
             </li>
           </ul>
+
+          <div class="profile-block" id="certifications">
+            <h3 data-i18n="cert.title">Professional certifications</h3>
+            <p class="block-note" data-i18n="cert.lede">Alongside the AIEA Associate certification above.</p>
+            <ul class="cert-grid">
+              <li>
+                <p class="cert-issuer">IBM</p>
+                <h4>IBM Cybersecurity Analyst</h4>
+                <p class="cert-id">YE3H42L46B4H</p>
+              </li>
+              <li>
+                <p class="cert-issuer">Google</p>
+                <h4>Google Cybersecurity Certificate <span class="nowrap">(GCC)</span></h4>
+                <p class="cert-id">WCYJLW9XVM5</p>
+              </li>
+              <li>
+                <p class="cert-issuer">EC-Council</p>
+                <h4>Certified Ethical Hacker <span class="nowrap">(CEH v10)</span></h4>
+                <p class="cert-id">ECC8527693401</p>
+              </li>
+              <li>
+                <p class="cert-issuer"><span class="only-en">NCC</span><span class="only-zh" lang="zh-Hant">國家通訊傳播委員會</span></p>
+                <h4>
+                  <span class="only-en">Class 3 Amateur Radio License</span>
+                  <span class="only-zh" lang="zh-Hant">三等業餘無線電人員執照</span>
+                </h4>
+                <p class="cert-id">52AS00110600387</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="profile-block" id="honors">
+            <h3 data-i18n="honor.title">Selected career honors</h3>
+            <ol class="honor-list">
+              <li>
+                <span class="record-when">2024</span>
+                <span>
+                  <span class="only-en">Outstanding Project, Teaching Practice Research Program, Ministry of Education</span>
+                  <span class="only-zh" lang="zh-Hant">教育部教學實踐研究計畫績優計畫</span>
+                </span>
+              </li>
+              <li>
+                <span class="record-when">2024</span>
+                <span>
+                  <span class="only-en">Champion, Military Academy Cyber Security Competition, Ministry of National Defense</span>
+                  <span class="only-zh" lang="zh-Hant">國防部軍校盃網路安全競賽冠軍</span>
+                </span>
+              </li>
+              <li>
+                <span class="record-when">2020</span>
+                <span>
+                  <span class="only-en">Outstanding Alumnus, Chung Cheng Armed Forces Preparatory School</span>
+                  <span class="only-zh" lang="zh-Hant">中正預校傑出校友</span>
+                </span>
+              </li>
+              <li>
+                <span class="record-when">2013–2025</span>
+                <span>
+                  <span class="only-en">Excellent Teacher, Ministry of National Defense, Air Force, and ROC Air Force Academy</span>
+                  <span class="only-zh" lang="zh-Hant">國防部、空軍與空軍官校優良教師</span>
+                </span>
+              </li>
+            </ol>
+            <details class="fold print-open">
+              <summary>
+                <span class="fold-title" data-i18n="honor.full">Year-by-year honor record</span>
+                <span class="fold-count">12</span>
+              </summary>
+              <ol class="record-list">
+                <li><span class="record-when">2025</span><span class="record-body"><span class="record-name"><span class="only-en">Excellent Teacher, ROC Air Force Academy</span><span class="only-zh" lang="zh-Hant">優良教師，空軍官校</span></span></span></li>
+                <li><span class="record-when">2024</span><span class="record-body"><span class="record-name"><span class="only-en">Poster-paper merit, 33rd National Defense Science and Technology Symposium, National Defense University</span><span class="only-zh" lang="zh-Hant">第33屆國防科技學術研討會海報論文佳作，國防大學</span></span></span></li>
+                <li><span class="record-when">2024</span><span class="record-body"><span class="record-name"><span class="only-en">Excellent Teacher, ROC Air Force Academy</span><span class="only-zh" lang="zh-Hant">優良教師，空軍官校</span></span></span></li>
+                <li><span class="record-when">2024</span><span class="record-body"><span class="record-name"><span class="only-en">First place, paper, 20th Military Operations Research and Modeling &amp; Simulation Forum, Ministry of National Defense</span><span class="only-zh" lang="zh-Hant">第20屆軍事作業研究與模式模擬論壇論文優勝，國防部</span></span></span></li>
+                <li><span class="record-when">2024</span><span class="record-body"><span class="record-name"><span class="only-en">Champion, Military Academy Cyber Security Competition, Ministry of National Defense</span><span class="only-zh" lang="zh-Hant">軍校盃網路安全競賽冠軍，國防部</span></span></span></li>
+                <li><span class="record-when">2024</span><span class="record-body"><span class="record-name"><span class="only-en">Outstanding Project, Teaching Practice Research Program, Ministry of Education</span><span class="only-zh" lang="zh-Hant">教學實踐研究計畫績優計畫，教育部</span></span></span></li>
+                <li><span class="record-when">2020</span><span class="record-body"><span class="record-name"><span class="only-en">Outstanding Alumnus, Chung Cheng Armed Forces Preparatory School</span><span class="only-zh" lang="zh-Hant">傑出校友，中正預校</span></span></span></li>
+                <li><span class="record-when">2019</span><span class="record-body"><span class="record-name"><span class="only-en">Excellent Teacher, Ministry of National Defense</span><span class="only-zh" lang="zh-Hant">國防部優良教師</span></span></span></li>
+                <li><span class="record-when">2017</span><span class="record-body"><span class="record-name"><span class="only-en">Excellent Teacher, Air Force Command</span><span class="only-zh" lang="zh-Hant">空軍優良教師，空軍司令部</span></span></span></li>
+                <li><span class="record-when">2016</span><span class="record-body"><span class="record-name"><span class="only-en">Excellent Teacher, ROC Air Force Academy</span><span class="only-zh" lang="zh-Hant">優良教師，空軍官校</span></span></span></li>
+                <li><span class="record-when">2015</span><span class="record-body"><span class="record-name"><span class="only-en">Excellent Teacher, Air Force Command</span><span class="only-zh" lang="zh-Hant">空軍優良教師，空軍司令部</span></span></span></li>
+                <li><span class="record-when">2013</span><span class="record-body"><span class="record-name"><span class="only-en">Excellent Teacher, Ministry of National Defense</span><span class="only-zh" lang="zh-Hant">國防部優良教師</span></span></span></li>
+              </ol>
+            </details>
+          </div>
+
+          <div class="profile-block" id="service">
+            <h3 data-i18n="service.title">Academic service</h3>
+            <ul class="service-list">
+              <li>
+                <span class="record-when">2024</span>
+                <span><span class="only-en">IEEE Senior Member</span><span class="only-zh" lang="zh-Hant">IEEE 資深會員</span></span>
+              </li>
+              <li>
+                <span class="record-when">2025–2026</span>
+                <span><span class="only-en">Chair, IEEE AP-S Tainan Chapter</span><span class="only-zh" lang="zh-Hant">IEEE AP-S 臺南分會主席</span></span>
+              </li>
+              <li>
+                <span class="record-when">2024</span>
+                <span><span class="only-en">Board Member, Association of Old Crows</span><span class="only-zh" lang="zh-Hant">國際電子戰協會（Association of Old Crows）理事</span></span>
+              </li>
+              <li>
+                <span class="record-when">2021 · 2011</span>
+                <span><span class="only-en">Board Member (2021) and Secretary-General (2011), Taiwan Antenna Engineers Society</span><span class="only-zh" lang="zh-Hant">臺灣天線工程師學會理事（2021）、秘書長（2011）</span></span>
+              </li>
+              <li>
+                <span class="record-when" data-i18n="service.reviewLabel">Reviewer</span>
+                <span><span class="only-en">IEEE TAP, IEEE TMTT, IEEE AWPL, IEEE MWTL, IEEE OJAP, IEEE Access, and <span lang="en">Measurement</span></span><span class="only-zh" lang="zh-Hant">IEEE TAP、IEEE TMTT、IEEE AWPL、IEEE MWTL、IEEE OJAP、IEEE Access 與 Measurement 審查委員</span></span>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -553,6 +917,64 @@
             <p class="eyebrow"><span data-i18n="stu.eyebrow">WORK WITH ME</span></p>
             <h2 id="students-title" data-i18n="stu.title">Prospective students &amp; collaborators</h2>
             <p class="lede" data-i18n="stu.lede">I welcome inquiries from students who want to build, measure, and explain how their systems work.</p>
+            <p class="mentor" data-i18n="stu.mentor">Faculty adviser for seven NSTC undergraduate research projects, 2018–2027.</p>
+            <details class="fold print-open">
+              <summary>
+                <span class="fold-title" data-i18n="stu.projects">Undergraduate research projects</span>
+                <span class="fold-count">7</span>
+              </summary>
+              <ol class="record-list">
+                <li>
+                  <span class="record-when">2026.07–2027.02</span>
+                  <span class="record-body">
+                    <span class="record-name"><span class="only-en">Verification of UAV communications-link security vulnerabilities and study of an airborne attack platform</span><span class="only-zh" lang="zh-Hant">無人機通訊鏈路安全漏洞驗證與機載式攻擊平台研究</span></span>
+                    <span class="record-note" lang="zh-Hant">李子安</span>
+                  </span>
+                </li>
+                <li>
+                  <span class="record-when">2024.07–2025.02</span>
+                  <span class="record-body">
+                    <span class="record-name"><span class="only-en">Prototype pilot physiological-signal monitoring for simulated flight</span><span class="only-zh" lang="zh-Hant">應用於模擬飛行之飛行員生理訊號監測系統雛形研究</span></span>
+                    <span class="record-note" lang="zh-Hant">張禕宸</span>
+                  </span>
+                </li>
+                <li>
+                  <span class="record-when">2024.07–2025.02</span>
+                  <span class="record-body">
+                    <span class="record-name"><span class="only-en">Aircraft detection combining active-array radar and automatic dependent surveillance-broadcast</span><span class="only-zh" lang="zh-Hant">結合主動陣列雷達與自動飛航廣播系統於航空載具偵測之研究</span></span>
+                    <span class="record-note" lang="zh-Hant">柯家恩</span>
+                  </span>
+                </li>
+                <li>
+                  <span class="record-when">2023.07–2024.02</span>
+                  <span class="record-body">
+                    <span class="record-name"><span class="only-en">Detecting small unmanned vehicles with an air-surveillance active-array scanning radar</span><span class="only-zh" lang="zh-Hant">利用對空主動陣列掃描雷達偵測小型無人載具</span></span>
+                    <span class="record-note" lang="zh-Hant">莊皓筑</span>
+                  </span>
+                </li>
+                <li>
+                  <span class="record-when">2019.07–2020.02</span>
+                  <span class="record-body">
+                    <span class="record-name"><span class="only-en">Software-defined radio for automatic dependent surveillance-broadcast</span><span class="only-zh" lang="zh-Hant">設計軟體定義無線電應用於自動飛航廣播系統</span></span>
+                    <span class="record-note" lang="zh-Hant">顏浤名</span>
+                  </span>
+                </li>
+                <li>
+                  <span class="record-when">2018.07–2019.02</span>
+                  <span class="record-body">
+                    <span class="record-name"><span class="only-en">A UAT 978 MHz automatic dependent surveillance-broadcast receiver</span><span class="only-zh" lang="zh-Hant">利用 UAT 978 MHz 研製自動飛航廣播接收器</span></span>
+                    <span class="record-note" lang="zh-Hant">紀凱文</span>
+                  </span>
+                </li>
+                <li>
+                  <span class="record-when">2018.07–2019.02</span>
+                  <span class="record-body">
+                    <span class="record-name"><span class="only-en">Computer-simulation optimization for defense-security problems</span><span class="only-zh" lang="zh-Hant">使用電腦模擬最佳化研究國防安全議題</span></span>
+                    <span class="record-note" lang="zh-Hant">蔡姿婷</span>
+                  </span>
+                </li>
+              </ol>
+            </details>
           </div>
           <div class="contact-actions">
             <a class="contact-link" href="mailto:francischen@go.isu.edu.tw">
@@ -562,6 +984,18 @@
             <a class="contact-link" href="https://orcid.org/0000-0003-4514-1504" rel="me">
               <strong>ORCID</strong>
               <span>0000-0003-4514-1504</span>
+            </a>
+            <div class="contact-card">
+              <strong data-i18n="stu.office">Office</strong>
+              <span data-i18n="stu.office.value">Room 3604D, Science &amp; Technology Bldg.</span>
+            </div>
+            <a class="contact-link" href="tel:+88676577711,6682">
+              <strong data-i18n="stu.phone">Phone</strong>
+              <span>+886-7-6577711 ext. 6682</span>
+            </a>
+            <a class="contact-link" href="https://ene.isu.edu.tw/teachers/1B402">
+              <strong data-i18n="stu.profile">Official faculty page</strong>
+              <span>ene.isu.edu.tw/teachers/1B402</span>
             </a>
           </div>
         </div>
@@ -582,6 +1016,9 @@
         </div>
         <div>
           <p><a href="mailto:francischen@go.isu.edu.tw">francischen@go.isu.edu.tw</a></p>
+          <p><a href="tel:+88676577711,6682">+886-7-6577711 ext. 6682</a></p>
+          <p data-i18n="stu.office.value">Room 3604D, Science &amp; Technology Bldg.</p>
+          <p><a href="https://ene.isu.edu.tw/teachers/1B402">ene.isu.edu.tw/teachers/1B402</a></p>
           <p><a href="https://orcid.org/0000-0003-4514-1504" rel="me">orcid.org/0000-0003-4514-1504</a></p>
           <p data-i18n="chip.ieee">IEEE Senior Member</p>
           <p data-i18n="chip.chair">Chair, IEEE AP-S Tainan Chapter (2025–2026)</p>
@@ -591,6 +1028,7 @@
           <nav class="footer-nav" aria-label="Footer">
             <a href="#about"><span data-i18n="nav.about">About</span></a>
             <a href="#research"><span data-i18n="nav.research">Research</span></a>
+            <a href="#grants"><span data-i18n="nav.grants">Grants</span></a>
             <a href="#publications"><span data-i18n="nav.publications">Publications</span></a>
             <a href="#awards"><span data-i18n="nav.awards">Awards</span></a>
             <a href="#activities"><span data-i18n="nav.activities">Activities</span></a>
@@ -627,6 +1065,7 @@
             "nav.menu": "Menu",
             "nav.about": "About",
             "nav.research": "Research",
+            "nav.grants": "Grants",
             "nav.publications": "Publications",
             "nav.awards": "Awards",
             "nav.activities": "Activities",
@@ -654,6 +1093,43 @@
             "link.awards": "Honors & awards",
             "fig.label": "FIG. 01",
             "fig.caption": "Conceptual antenna radiation pattern",
+            "portrait.label": "Portrait",
+            "portrait.caption": "Official faculty portrait",
+            "bg.eyebrow": "Background",
+            "bg.title": "Academic background",
+            "bg.edu": "Education",
+            "bg.exp": "Experience",
+            "bg.spec": "Research specialties",
+            "grant.eyebrow": "Funded research",
+            "grant.title": "Grants",
+            "grant.lede": "Six NSTC grants, five Ministry of Education projects, one industry–academia collaboration with Paramtek Inc., and one other external project.",
+            "grant.stat.nstc": "6 NSTC",
+            "grant.stat.moe": "5 MOE",
+            "grant.stat.ind": "1 industry–academia",
+            "grant.stat.ext": "1 external",
+            "grant.active": "Active",
+            "grant.nstc": "NSTC",
+            "grant.moe": "Ministry of Education",
+            "grant.industry": "Industry–academia",
+            "grant.cardInd": "Industry",
+            "grant.external": "External project",
+            "grant.full": "Full grant record, 2022–2027",
+            "grant.fullCount": "13 projects",
+            "patent.eyebrow": "U.S. Patent",
+            "patent.term": "2010–2032",
+            "patent.country": "United States",
+            "patent.inv": "Inventors",
+            "pub.earlier": "Selected earlier journal & conference papers",
+            "pub.earlier.count": "11 journals · 4 conferences",
+            "pub.earlier.note": "The faculty page lists 14 journal papers, including IEEE TAP, IEEE AWPL, IEEE Access, and IEEE J. RFID. The three 2026 journal articles are featured above. Earlier journal papers and four international conference papers follow.",
+            "pub.journals": "Journal papers",
+            "pub.conferences": "Conference papers",
+            "cert.title": "Professional certifications",
+            "cert.lede": "Alongside the AIEA Associate certification above.",
+            "honor.title": "Selected career honors",
+            "honor.full": "Year-by-year honor record",
+            "service.title": "Academic service",
+            "service.reviewLabel": "Reviewer",
             "research.eyebrow": "AREAS OF WORK",
             "research.title": "Research & teaching",
             "research.design": "01 / DESIGN",
@@ -738,7 +1214,13 @@
             "stu.eyebrow": "WORK WITH ME",
             "stu.title": "Prospective students & collaborators",
             "stu.lede": "I welcome inquiries from students who want to build, measure, and explain how their systems work.",
+            "stu.mentor": "Faculty adviser for seven NSTC undergraduate research projects, 2018–2027.",
+            "stu.projects": "Undergraduate research projects",
             "stu.email": "University email",
+            "stu.office": "Office",
+            "stu.office.value": "Room 3604D, Science & Technology Bldg.",
+            "stu.phone": "Phone",
+            "stu.profile": "Official faculty page",
             "footer.name": "Chien-Hung Chen",
             "footer.uni": "I-Shou University, Taiwan",
             "footer.copy": "© Copyright 2026 Chien-Hung Chen."
@@ -748,6 +1230,7 @@
             "nav.menu": "選單",
             "nav.about": "簡介",
             "nav.research": "研究",
+            "nav.grants": "計畫",
             "nav.publications": "著作",
             "nav.awards": "榮譽",
             "nav.activities": "活動",
@@ -775,6 +1258,43 @@
             "link.awards": "榮譽與獎項",
             "fig.label": "圖 01",
             "fig.caption": "概念性天線輻射場型",
+            "portrait.label": "肖像",
+            "portrait.caption": "官方教職肖像",
+            "bg.eyebrow": "學經歷",
+            "bg.title": "學術背景",
+            "bg.edu": "學歷",
+            "bg.exp": "經歷",
+            "bg.spec": "研究專長",
+            "grant.eyebrow": "獲補助計畫",
+            "grant.title": "研究計畫",
+            "grant.lede": "國科會計畫 6 件、教育部計畫 5 件、與拚願科技的產學計畫 1 件，以及另 1 件校外計畫。",
+            "grant.stat.nstc": "國科會 6",
+            "grant.stat.moe": "教育部 5",
+            "grant.stat.ind": "產學 1",
+            "grant.stat.ext": "校外 1",
+            "grant.active": "執行中",
+            "grant.nstc": "國科會",
+            "grant.moe": "教育部",
+            "grant.industry": "產學",
+            "grant.cardInd": "產學",
+            "grant.external": "其他校外計畫",
+            "grant.full": "完整計畫紀錄，2022–2027",
+            "grant.fullCount": "13 件",
+            "patent.eyebrow": "美國專利",
+            "patent.term": "2010–2032",
+            "patent.country": "美國",
+            "patent.inv": "發明人",
+            "pub.earlier": "較早的期刊與研討會論文",
+            "pub.earlier.count": "期刊 11 · 研討會 4",
+            "pub.earlier.note": "教師頁列出 14 篇期刊論文，包含 IEEE TAP、IEEE AWPL、IEEE Access 與 IEEE J. RFID。上方三篇 2026 年期刊已另行列出。以下為較早的期刊論文，以及四篇國際研討會論文。",
+            "pub.journals": "期刊論文",
+            "pub.conferences": "研討會論文",
+            "cert.title": "專業證照",
+            "cert.lede": "與上方 AIEA 基礎認證並列。",
+            "honor.title": "生涯榮譽選錄",
+            "honor.full": "逐年獲獎紀錄",
+            "service.title": "學術服務",
+            "service.reviewLabel": "審查",
             "research.eyebrow": "研究領域",
             "research.title": "研究與教學",
             "research.design": "01 / 設計",
@@ -859,7 +1379,13 @@
             "stu.eyebrow": "與我合作",
             "stu.title": "未來的學生與合作者",
             "stu.lede": "歡迎想親手做出系統、量測它，並且把原理說清楚的同學與合作者來信。",
+            "stu.mentor": "指導國科會大專生研究計畫 7 件（2018–2027）。",
+            "stu.projects": "大專生研究計畫",
             "stu.email": "學校信箱",
+            "stu.office": "辦公室",
+            "stu.office.value": "科技大樓 3604D",
+            "stu.phone": "電話",
+            "stu.profile": "義守大學教師頁",
             "footer.name": "陳建宏",
             "footer.uni": "義守大學，臺灣",
             "footer.copy": "© Copyright 2026 陳建宏"
@@ -1058,7 +1584,7 @@
         function revealHash() {
           var id = (location.hash || "").slice(1);
           if (!id) return;
-          var primary = { about: 1, research: 1, publications: 1, awards: 1, activities: 1, students: 1, highlights: 1 };
+          var primary = { about: 1, background: 1, research: 1, grants: 1, publications: 1, awards: 1, activities: 1, students: 1, highlights: 1 };
           if (primary[id]) {
             applyFilter("all");
             return;
@@ -1074,7 +1600,18 @@
           });
         });
         window.addEventListener("hashchange", revealHash);
-        window.addEventListener("beforeprint", function () { applyFilter("all"); });
+        window.addEventListener("beforeprint", function () {
+          applyFilter("all");
+          document.querySelectorAll("details.print-open").forEach(function (el) {
+            el.dataset.wasOpen = el.open ? "1" : "0";
+            el.open = true;
+          });
+        });
+        window.addEventListener("afterprint", function () {
+          document.querySelectorAll("details.print-open").forEach(function (el) {
+            if (el.dataset.wasOpen !== "1") el.open = false;
+          });
+        });
 
         var header = document.querySelector(".site-header");
         var toggle = document.querySelector(".nav-toggle");

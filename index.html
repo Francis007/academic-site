@@ -8,10 +8,27 @@
     <meta name="theme-color" content="#f3eee4">
     <title>Chien-Hung Chen | Professor of Electronic Engineering, I-Shou University</title>
     <link rel="canonical" href="https://francis007.github.io/academic-site/">
-    <meta property="og:title" content="Chien-Hung Chen">
-    <meta property="og:description" content="Professor of Electronic Engineering at I-Shou University, Taiwan.">
+    <meta property="og:title" content="Chien-Hung Chen | I-Shou University">
+    <meta property="og:description" content="Professor of Electronic Engineering at I-Shou University, Taiwan. Antennas, radar sensing, and engineering education.">
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://francis007.github.io/academic-site/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_TW">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Chien-Hung Chen | I-Shou University">
+    <meta name="twitter:description" content="Professor of Electronic Engineering at I-Shou University, Taiwan.">
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("francis-theme");
+          var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+          var lang = localStorage.getItem("francis-lang") || "en";
+          document.documentElement.setAttribute("data-theme", theme);
+          document.documentElement.setAttribute("data-lang", lang);
+          if (lang === "zh") document.documentElement.lang = "zh-Hant";
+        } catch (err) {}
+      })();
+    </script>
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self';"
@@ -23,7 +40,7 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&amp;family=Noto+Sans+TC:wght@400;500;600&amp;family=Plus+Jakarta+Sans:ital,wght@0,400..700;1,400..500&amp;display=swap"
     >
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23102833'/%3E%3Cpath d='M8 16h16M16 8v16' stroke='%23e4c78a' stroke-width='1.6'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23f2d7a2'/%3E%3C/svg%3E">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23102833'/%3E%3Cpath d='M21.5 9.5a7.2 7.2 0 1 0 0 13' fill='none' stroke='%23f2d7a2' stroke-width='2.2'/%3E%3C/svg%3E">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -43,26 +60,42 @@
     </script>
   </head>
   <body>
-    <a class="skip-link" href="#about">Skip to content</a>
+    <a class="skip-link" href="#about"><span data-i18n="skip">Skip to content</span></a>
 
     <header class="site-header">
       <div class="header-inner wrap">
         <a class="brand" href="#about">
           <span class="monogram" aria-hidden="true">C</span>
-          <span>Chien-Hung Chen</span>
+          <span data-i18n="footer.name">Chien-Hung Chen</span>
         </a>
         <nav class="site-nav" aria-label="Primary">
+          <div class="header-tools">
+            <div class="lang-switch" role="group" aria-label="Language">
+              <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+              <button type="button" data-set-lang="zh" lang="zh-Hant" aria-pressed="false">繁中</button>
+            </div>
+            <button class="theme-toggle" type="button" aria-pressed="false">
+              <span class="sr-only" data-i18n="theme.label">Switch to dark theme</span>
+              <svg class="icon-moon" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4">
+                <path d="M10.2 2.2a5.2 5.2 0 1 0 3.6 8.8 4.4 4.4 0 0 1-3.6-8.8z"></path>
+              </svg>
+              <svg class="icon-sun" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4">
+                <circle cx="8" cy="8" r="2.4"></circle>
+                <path d="M8 1.6v1.6M8 12.8v1.6M1.6 8h1.6M12.8 8h1.6M3.4 3.4l1.1 1.1M11.5 11.5l1.1 1.1M12.6 3.4l-1.1 1.1M4.5 11.5l-1.1 1.1"></path>
+              </svg>
+            </button>
+          </div>
           <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-            <span class="sr-only">Menu</span>
+            <span class="sr-only" data-i18n="nav.menu">Menu</span>
             <span class="nav-toggle-bars" aria-hidden="true"></span>
           </button>
           <ul class="nav-links" id="site-nav">
-            <li><a class="is-active" href="#about" aria-current="true">About</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#awards">Awards</a></li>
-            <li><a href="#activities">Activities</a></li>
-            <li><a href="#students">Students</a></li>
+            <li><a class="is-active" href="#about" aria-current="true"><span data-i18n="nav.about">About</span></a></li>
+            <li><a href="#research"><span data-i18n="nav.research">Research</span></a></li>
+            <li><a href="#publications"><span data-i18n="nav.publications">Publications</span></a></li>
+            <li><a href="#awards"><span data-i18n="nav.awards">Awards</span></a></li>
+            <li><a href="#activities"><span data-i18n="nav.activities">Activities</span></a></li>
+            <li><a href="#students"><span data-i18n="nav.students">Students</span></a></li>
           </ul>
         </nav>
       </div>
@@ -72,28 +105,29 @@
       <section class="hero" id="about" tabindex="-1" aria-labelledby="about-title">
         <div class="wrap hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">I-SHOU UNIVERSITY · TAIWAN</p>
-            <h1 id="about-title">Chien-Hung<br>Chen</h1>
+            <p class="eyebrow"><span data-i18n="hero.eyebrow">I-SHOU UNIVERSITY · TAIWAN</span></p>
+            <h1 id="about-title" data-i18n-html="hero.name">Chien-Hung<br>Chen</h1>
             <p class="alias">Francis Chen</p>
-            <p class="role">Professor of Electronic Engineering</p>
+            <p class="role" data-i18n="hero.role">Professor of Electronic Engineering</p>
             <p class="affiliation">
-              Department of Electronic Engineering<br>
-              College of Intelligent Science and Technology<br>
-              I-Shou University
+              <span data-i18n="hero.aff1">Department of Electronic Engineering</span><br>
+              <span data-i18n="hero.aff2">College of Intelligent Science and Technology</span><br>
+              <span data-i18n="hero.aff3">I-Shou University</span>
             </p>
             <ul class="chips">
-              <li>IEEE Senior Member</li>
-              <li>Chair, IEEE AP-S Tainan Chapter (2025–2026)</li>
+              <li data-i18n="chip.ieee">IEEE Senior Member</li>
+              <li data-i18n="chip.chair">Chair, IEEE AP-S Tainan Chapter (2025–2026)</li>
             </ul>
-            <p class="bio">I develop and measure antennas and radar sensing systems, and teach students how to take an engineering idea from simulation to experiment.</p>
+            <p class="bio" data-i18n="hero.bio">I develop and measure antennas and radar sensing systems, and teach students how to take an engineering idea from simulation to experiment.</p>
             <div class="action-row">
-              <a class="button" href="mailto:francischen@go.isu.edu.tw">Email</a>
+              <a class="button" href="mailto:francischen@go.isu.edu.tw"><span data-i18n="btn.email">Email</span></a>
               <a class="button button-secondary" href="https://orcid.org/0000-0003-4514-1504" rel="me">ORCID</a>
-              <a class="button button-secondary" href="#research">Research <span aria-hidden="true">→</span></a>
+              <button class="button button-secondary js-print" type="button"><span data-i18n="btn.print">Print CV</span></button>
             </div>
             <p class="quiet-links">
-              <a href="#publications">Selected publications <span aria-hidden="true">→</span></a>
-              <a href="#awards">Honors &amp; awards <span aria-hidden="true">→</span></a>
+              <a href="#research"><span data-i18n="btn.research">Research</span> <span aria-hidden="true">→</span></a>
+              <a href="#publications"><span data-i18n="link.pubs">Selected publications</span> <span aria-hidden="true">→</span></a>
+              <a href="#awards"><span data-i18n="link.awards">Honors &amp; awards</span> <span aria-hidden="true">→</span></a>
             </p>
           </div>
           <figure class="plate">
@@ -154,7 +188,7 @@
       <text x="330.0" y="528.0" text-anchor="middle">270°</text>
     </g>
   </svg>
-            <figcaption><span>FIG. 01</span> Conceptual antenna radiation pattern</figcaption>
+            <figcaption><span data-i18n="fig.label">FIG. 01</span> <span data-i18n="fig.caption">Conceptual antenna radiation pattern</span></figcaption>
           </figure>
         </div>
       </section>
@@ -162,13 +196,13 @@
       <section class="section" id="research" tabindex="-1" aria-labelledby="research-title">
         <div class="wrap">
           <header class="section-head">
-            <p class="eyebrow">AREAS OF WORK</p>
-            <h2 id="research-title">Research &amp; teaching</h2>
+            <p class="eyebrow"><span data-i18n="research.eyebrow">AREAS OF WORK</span></p>
+            <h2 id="research-title" data-i18n="research.title">Research &amp; teaching</h2>
           </header>
           <ul class="research-grid">
             <li class="research-card">
               <div class="card-top">
-                <p class="card-index">01 / DESIGN</p>
+                <p class="card-index" data-i18n="research.design">01 / DESIGN</p>
                 <span class="card-icon">
                   <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M11 32.5h26"></path>
@@ -180,12 +214,13 @@
                   </svg>
                 </span>
               </div>
-              <h3>Antennas &amp; Electromagnetics</h3>
-              <p>Compact, wearable, and integrated antennas, with an emphasis on measured performance.</p>
+              <h3 data-i18n="research.ant.title">Antennas &amp; Electromagnetics</h3>
+              <p data-i18n="research.ant.body">Compact, wearable, and integrated antennas, with an emphasis on measured performance.</p>
+              <a class="pillar-link" href="#pub-rfid"><span data-i18n="research.jump">Related paper</span> <span aria-hidden="true">→</span></a>
             </li>
             <li class="research-card">
               <div class="card-top">
-                <p class="card-index">02 / SENSE</p>
+                <p class="card-index" data-i18n="research.sense">02 / SENSE</p>
                 <span class="card-icon">
                   <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M24 38v-5"></path>
@@ -196,12 +231,13 @@
                   </svg>
                 </span>
               </div>
-              <h3>Radar &amp; Non-contact Sensing</h3>
-              <p>Signal processing and measurement methods for assessing when a non-contact reading is reliable.</p>
+              <h3 data-i18n="research.radar.title">Radar &amp; Non-contact Sensing</h3>
+              <p data-i18n="research.radar.body">Signal processing and measurement methods for assessing when a non-contact reading is reliable.</p>
+              <a class="pillar-link" href="#pub-radar"><span data-i18n="research.jump">Related paper</span> <span aria-hidden="true">→</span></a>
             </li>
             <li class="research-card">
               <div class="card-top">
-                <p class="card-index">03 / TEACH</p>
+                <p class="card-index" data-i18n="research.teach">03 / TEACH</p>
                 <span class="card-icon">
                   <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <rect x="10" y="8" width="22" height="32"></rect>
@@ -211,8 +247,9 @@
                   </svg>
                 </span>
               </div>
-              <h3>Engineering Education</h3>
-              <p>Hands-on learning that takes students from simulation to prototyping and measurement.</p>
+              <h3 data-i18n="research.edu.title">Engineering Education</h3>
+              <p data-i18n="research.edu.body">Hands-on learning that takes students from simulation to prototyping and measurement.</p>
+              <a class="pillar-link" href="#pub-edu"><span data-i18n="research.jump">Related paper</span> <span aria-hidden="true">→</span></a>
             </li>
           </ul>
         </div>
@@ -221,23 +258,29 @@
       <section class="section" id="highlights" tabindex="-1" aria-labelledby="highlights-title">
         <div class="wrap">
           <header class="section-head">
-            <p class="eyebrow">NOVEMBER 2026</p>
-            <h2 id="highlights-title">Recent highlights</h2>
+            <p class="eyebrow"><span data-i18n="hl.eyebrow">NOVEMBER 2026</span></p>
+            <h2 id="highlights-title" data-i18n="hl.title">Recent highlights</h2>
           </header>
+          <div class="filter-bar" role="group" aria-label="Filter">
+            <button class="filter-chip" type="button" data-filter-key="all" aria-pressed="true"><span data-i18n="filter.all">All</span></button>
+            <button class="filter-chip" type="button" data-filter-key="awards" aria-pressed="false"><span data-i18n="filter.awards">Awards</span></button>
+            <button class="filter-chip" type="button" data-filter-key="service" aria-pressed="false"><span data-i18n="filter.service">Teaching &amp; Service</span></button>
+            <button class="filter-chip" type="button" data-filter-key="outreach" aria-pressed="false"><span data-i18n="filter.outreach">Outreach</span></button>
+          </div>
           <div class="highlight-list">
-            <a href="#entrepreneurial-innovation">
-              <time datetime="2026-11-25">25 NOV</time>
-              <span>Third place at I-Shou University’s entrepreneurial innovation competition</span>
+            <a href="#entrepreneurial-innovation" data-filter="awards">
+              <time datetime="2026-11-25" data-i18n="date.short25">25 NOV</time>
+              <span data-i18n="hl.1">Third place at I-Shou University’s entrepreneurial innovation competition</span>
               <b aria-hidden="true">→</b>
             </a>
-            <a href="#outstanding-poster">
-              <time datetime="2026-11-21">21 NOV</time>
-              <span>Outstanding Poster Paper Award for collaborative UHF RFID research</span>
+            <a href="#outstanding-poster" data-filter="awards">
+              <time datetime="2026-11-21" data-i18n="date.short21">21 NOV</time>
+              <span data-i18n="hl.2">Outstanding Poster Paper Award for collaborative UHF RFID research</span>
               <b aria-hidden="true">→</b>
             </a>
-            <a href="#shield-cup">
-              <time datetime="2026-11-08">08 NOV</time>
-              <span>Two faculty-advised teams recognized at the Shield Cup</span>
+            <a href="#shield-cup" data-filter="awards">
+              <time datetime="2026-11-08" data-i18n="date.short08">08 NOV</time>
+              <span data-i18n="hl.3">Two faculty-advised teams recognized at the Shield Cup</span>
               <b aria-hidden="true">→</b>
             </a>
           </div>
@@ -247,61 +290,113 @@
       <section class="section" id="publications" tabindex="-1" aria-labelledby="publications-title">
         <div class="wrap">
           <header class="section-head">
-            <p class="eyebrow">Publications</p>
-            <h2 id="publications-title">Selected publications</h2>
-            <p class="lede">Selected peer-reviewed work.</p>
+            <p class="eyebrow"><span data-i18n="pub.eyebrow">Publications</span></p>
+            <h2 id="publications-title" data-i18n="pub.title">Selected publications</h2>
+            <p class="lede" data-i18n="pub.lede">Selected peer-reviewed work.</p>
           </header>
           <ol class="bibliography">
-            <li class="pub">
-              <span class="pub-index">01</span>
-              <div>
-                <h3>
-                  <a href="https://doi.org/10.1002/cae.70287">A Cloud Learning-Analytics Framework for Multi-Tier Engineering Education: A Mixed-Methods Implementation Case Study Across Three Avionics Courses</a>
-                </h3>
-                <div class="pub-meta">
-                  <span class="badge badge-edu">Engineering education</span>
-                  <span class="venue">Computer Applications in Engineering Education</span>
+            <li class="pub" id="pub-edu">
+              <div class="pub-top">
+                <span class="pub-index">01</span>
+                <div>
+                  <h3>
+                    <a lang="en" href="https://doi.org/10.1002/cae.70287">A Cloud Learning-Analytics Framework for Multi-Tier Engineering Education: A Mixed-Methods Implementation Case Study Across Three Avionics Courses</a>
+                  </h3>
+                  <div class="pub-meta">
+                    <span class="badge badge-edu" data-i18n="badge.edu">Engineering education</span>
+                    <span class="venue" lang="en">Computer Applications in Engineering Education</span>
+                  </div>
                 </div>
               </div>
-              <a class="doi" href="https://doi.org/10.1002/cae.70287">
-                <span class="doi-label">DOI</span>
-                <span>10.1002/cae.70287</span>
-                <span aria-hidden="true">↗</span>
-              </a>
+              <div class="pub-actions">
+                <a class="doi" href="https://doi.org/10.1002/cae.70287">
+                  <span class="doi-label">DOI</span>
+                  <span>10.1002/cae.70287</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+                <details class="bib">
+                  <summary data-i18n="pub.bib">BibTeX</summary>
+                  <div class="bib-panel">
+                    <pre class="bibtex"><code>@article{chen-cae70287,
+  author = {Chien-Hung Chen},
+  title = {A Cloud Learning-Analytics Framework for Multi-Tier Engineering Education: A Mixed-Methods Implementation Case Study Across Three Avionics Courses},
+  journal = {Computer Applications in Engineering Education},
+  doi = {10.1002/cae.70287}
+}</code></pre>
+                    <button class="bib-copy" type="button" data-i18n="pub.copy">Copy BibTeX</button>
+                  </div>
+                </details>
+              </div>
             </li>
-            <li class="pub">
-              <span class="pub-index">02</span>
-              <div>
-                <h3>
-                  <a href="https://doi.org/10.1109/ACCESS.2026.3730413">Bias-Corrected Inference for Post-CFAR Left-Truncated Radar Amplitude Statistics</a>
-                </h3>
-                <div class="pub-meta">
-                  <span class="badge badge-radar">Radar signal processing</span>
-                  <span class="venue">IEEE Access</span>
+            <li class="pub" id="pub-radar">
+              <div class="pub-top">
+                <span class="pub-index">02</span>
+                <div>
+                  <h3>
+                    <a lang="en" href="https://doi.org/10.1109/ACCESS.2026.3730413">Bias-Corrected Inference for Post-CFAR Left-Truncated Radar Amplitude Statistics</a>
+                  </h3>
+                  <div class="pub-meta">
+                    <span class="badge badge-radar" data-i18n="badge.radar">Radar signal processing</span>
+                    <span class="venue" lang="en">IEEE Access</span>
+                    <span class="year-pill">2026</span>
+                  </div>
                 </div>
               </div>
-              <a class="doi" href="https://doi.org/10.1109/ACCESS.2026.3730413">
-                <span class="doi-label">DOI</span>
-                <span>10.1109/ACCESS.2026.3730413</span>
-                <span aria-hidden="true">↗</span>
-              </a>
+              <div class="pub-actions">
+                <a class="doi" href="https://doi.org/10.1109/ACCESS.2026.3730413">
+                  <span class="doi-label">DOI</span>
+                  <span>10.1109/ACCESS.2026.3730413</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+                <details class="bib">
+                  <summary data-i18n="pub.bib">BibTeX</summary>
+                  <div class="bib-panel">
+                    <pre class="bibtex"><code>@article{chen2026access,
+  author = {Chien-Hung Chen},
+  title = {Bias-Corrected Inference for Post-CFAR Left-Truncated Radar Amplitude Statistics},
+  journal = {IEEE Access},
+  year = {2026},
+  doi = {10.1109/ACCESS.2026.3730413}
+}</code></pre>
+                    <button class="bib-copy" type="button" data-i18n="pub.copy">Copy BibTeX</button>
+                  </div>
+                </details>
+              </div>
             </li>
-            <li class="pub">
-              <span class="pub-index">03</span>
-              <div>
-                <h3>
-                  <a href="https://doi.org/10.1109/JRFID.2026.3743132">A Compact Long-Range Wrist-Worn UHF RFID Tag Antenna Based on Partially Overlapping Shorted Patches</a>
-                </h3>
-                <div class="pub-meta">
-                  <span class="badge badge-ant">Antennas</span>
-                  <span class="venue">IEEE Journal of Radio Frequency Identification</span>
+            <li class="pub" id="pub-rfid">
+              <div class="pub-top">
+                <span class="pub-index">03</span>
+                <div>
+                  <h3>
+                    <a lang="en" href="https://doi.org/10.1109/JRFID.2026.3743132">A Compact Long-Range Wrist-Worn UHF RFID Tag Antenna Based on Partially Overlapping Shorted Patches</a>
+                  </h3>
+                  <div class="pub-meta">
+                    <span class="badge badge-ant" data-i18n="badge.ant">Antennas</span>
+                    <span class="venue" lang="en">IEEE Journal of Radio Frequency Identification</span>
+                    <span class="year-pill">2026</span>
+                  </div>
                 </div>
               </div>
-              <a class="doi" href="https://doi.org/10.1109/JRFID.2026.3743132">
-                <span class="doi-label">DOI</span>
-                <span>10.1109/JRFID.2026.3743132</span>
-                <span aria-hidden="true">↗</span>
-              </a>
+              <div class="pub-actions">
+                <a class="doi" href="https://doi.org/10.1109/JRFID.2026.3743132">
+                  <span class="doi-label">DOI</span>
+                  <span>10.1109/JRFID.2026.3743132</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+                <details class="bib">
+                  <summary data-i18n="pub.bib">BibTeX</summary>
+                  <div class="bib-panel">
+                    <pre class="bibtex"><code>@article{chen2026jrfid,
+  author = {Chien-Hung Chen},
+  title = {A Compact Long-Range Wrist-Worn UHF RFID Tag Antenna Based on Partially Overlapping Shorted Patches},
+  journal = {IEEE Journal of Radio Frequency Identification},
+  year = {2026},
+  doi = {10.1109/JRFID.2026.3743132}
+}</code></pre>
+                    <button class="bib-copy" type="button" data-i18n="pub.copy">Copy BibTeX</button>
+                  </div>
+                </details>
+              </div>
             </li>
           </ol>
         </div>
@@ -310,36 +405,36 @@
       <section class="section" id="awards" tabindex="-1" aria-labelledby="awards-title">
         <div class="wrap">
           <header class="section-head">
-            <p class="eyebrow">Awards</p>
-            <h2 id="awards-title">Honors &amp; awards</h2>
-            <p class="lede">Recent team and research honors.</p>
+            <p class="eyebrow"><span data-i18n="award.eyebrow">Awards</span></p>
+            <h2 id="awards-title" data-i18n="award.title">Honors &amp; awards</h2>
+            <p class="lede" data-i18n="award.lede">Recent team and research honors.</p>
           </header>
           <ul class="award-grid">
-            <li>
+            <li data-filter="awards">
               <article class="award" id="entrepreneurial-innovation">
-                <p class="meta"><time datetime="2026-11-25">25 November 2026</time> · I-Shou University</p>
-                <div class="badge-row"><span class="badge badge-third">Third Place</span></div>
-                <h3>Third Place · Entrepreneurial Innovation Competition</h3>
-                <p lang="zh-Hant">創義盃｜創新商品永續營運組第三名。義起守護團隊以「義呼百應」非接觸式呼吸感測參賽。</p>
+                <p class="meta"><time datetime="2026-11-25" data-i18n="date.nov25">25 November 2026</time> · <span data-i18n="award.1.place">I-Shou University</span></p>
+                <div class="badge-row"><span class="badge badge-third" data-i18n="badge.third">Third Place</span></div>
+                <h3 data-i18n="award.1.title">Third Place · Entrepreneurial Innovation Competition</h3>
+                <p data-i18n="award.1.body" data-i18n-keep-lang="zh-Hant">創義盃｜創新商品永續營運組第三名。義起守護團隊以「義呼百應」非接觸式呼吸感測參賽。</p>
               </article>
             </li>
-            <li>
+            <li data-filter="awards">
               <article class="award" id="outstanding-poster">
-                <p class="meta"><time datetime="2026-11-21">21 November 2026</time> · Research</p>
-                <div class="badge-row"><span class="badge badge-distinction">Distinction</span></div>
-                <h3>Outstanding Poster Paper Award</h3>
-                <p lang="zh-Hant">第一屆產業轉型與創新實踐論文獎｜海報論文優良獎。義守大學與高科大合作，研究黃銅閥件與管件的 UHF RFID。</p>
+                <p class="meta"><time datetime="2026-11-21" data-i18n="date.nov21">21 November 2026</time> · <span data-i18n="award.2.place">Research</span></p>
+                <div class="badge-row"><span class="badge badge-distinction" data-i18n="badge.distinction">Distinction</span></div>
+                <h3 data-i18n="award.2.title">Outstanding Poster Paper Award</h3>
+                <p data-i18n="award.2.body" data-i18n-keep-lang="zh-Hant">第一屆產業轉型與創新實踐論文獎｜海報論文優良獎。義守大學與高科大合作，研究黃銅閥件與管件的 UHF RFID。</p>
               </article>
             </li>
-            <li>
+            <li data-filter="awards">
               <article class="award" id="shield-cup">
-                <p class="meta"><time datetime="2026-11-08">8 November 2026</time> · National Cheng Kung University</p>
+                <p class="meta"><time datetime="2026-11-08" data-i18n="date.nov8">8 November 2026</time> · <span data-i18n="award.3.place">National Cheng Kung University</span></p>
                 <div class="badge-row">
-                  <span class="badge badge-best">Best Paper</span>
-                  <span class="badge badge-creativity">Creativity</span>
+                  <span class="badge badge-best" data-i18n="badge.best">Best Paper</span>
+                  <span class="badge badge-creativity" data-i18n="badge.creativity">Creativity</span>
                 </div>
-                <h3>Best Paper Award and Creativity Award · Shield Cup</h3>
-                <p>Faculty adviser to two teams: <span lang="zh-Hant">鯤島識舟</span> (Best Paper) and Falcon Wing (Creativity Award). <a class="ext-link" href="https://www.ydn.com.tw/tw/news/ugC_News_Detail.aspx?ID=649813">Public award coverage <span aria-hidden="true">→</span></a></p>
+                <h3 data-i18n="award.3.title">Best Paper Award and Creativity Award · Shield Cup</h3>
+                <p><span data-i18n-html="award.3.text">Faculty adviser to two teams: <span lang="zh-Hant">鯤島識舟</span> (Best Paper) and Falcon Wing (Creativity Award).</span> <a class="ext-link" href="https://www.ydn.com.tw/tw/news/ugC_News_Detail.aspx?ID=649813"><span data-i18n="award.3.link">Public award coverage</span> <span aria-hidden="true">→</span></a></p>
               </article>
             </li>
           </ul>
@@ -349,28 +444,28 @@
       <section class="section" id="activities" tabindex="-1" aria-labelledby="activities-title">
         <div class="wrap">
           <header class="section-head">
-            <p class="eyebrow">Recent</p>
-            <h2 id="activities-title">Activities</h2>
-            <p class="lede">Academic service and student outreach.</p>
+            <p class="eyebrow"><span data-i18n="act.eyebrow">Recent</span></p>
+            <h2 id="activities-title" data-i18n="act.title">Activities</h2>
+            <p class="lede" data-i18n="act.lede">Academic service and student outreach.</p>
           </header>
           <ul class="activity-grid">
-            <li class="activity">
-              <span class="badge badge-teach">Teaching</span>
-              <p class="meta"><time datetime="2026-11-25">25 November 2026</time> · Student learning</p>
-              <h3>Semiconductor research institute visit</h3>
-              <p>First-year electronic engineering students visited the Taiwan Semiconductor Research Institute.</p>
+            <li class="activity" data-filter="service">
+              <span class="badge badge-teach" data-i18n="badge.teach">Teaching</span>
+              <p class="meta"><time datetime="2026-11-25" data-i18n="date.nov25">25 November 2026</time> · <span data-i18n="act.1.kind">Student learning</span></p>
+              <h3 data-i18n="act.1.title">Semiconductor research institute visit</h3>
+              <p data-i18n="act.1.body">First-year electronic engineering students visited the Taiwan Semiconductor Research Institute.</p>
             </li>
-            <li class="activity">
-              <span class="badge badge-service">IEEE Service</span>
-              <p class="meta"><time datetime="2026-11-22">22 November 2026</time> · Academic service</p>
-              <h3>IEEE AP-S Tainan Chapter Annual General Meeting</h3>
-              <p>Annual chapter gathering at National Sun Yat-sen University. <a class="ext-link" href="https://events.vtools.ieee.org/m/586690">IEEE event page <span aria-hidden="true">→</span></a></p>
+            <li class="activity" data-filter="service">
+              <span class="badge badge-service" data-i18n="badge.ieee">IEEE Service</span>
+              <p class="meta"><time datetime="2026-11-22" data-i18n="date.nov22">22 November 2026</time> · <span data-i18n="act.2.kind">Academic service</span></p>
+              <h3 data-i18n="act.2.title">IEEE AP-S Tainan Chapter Annual General Meeting</h3>
+              <p><span data-i18n="act.2.body">Annual chapter gathering at National Sun Yat-sen University.</span> <a class="ext-link" href="https://events.vtools.ieee.org/m/586690"><span data-i18n="act.2.link">IEEE event page</span> <span aria-hidden="true">→</span></a></p>
             </li>
-            <li class="activity">
-              <span class="badge badge-outreach">Outreach</span>
-              <p class="meta"><time datetime="2026-11-01">1 November 2026</time> · Science outreach</p>
-              <h3>Hands-on satellite navigation at the Pingye Science Festival</h3>
-              <p>GNSS outreach at National Pingtung University of Science and Technology. <a class="ext-link" href="https://news.npust.edu.tw/2026/11/04/focus2847/">University coverage <span aria-hidden="true">→</span></a></p>
+            <li class="activity" data-filter="outreach">
+              <span class="badge badge-outreach" data-i18n="badge.out">Outreach</span>
+              <p class="meta"><time datetime="2026-11-01" data-i18n="date.nov1">1 November 2026</time> · <span data-i18n="act.3.kind">Science outreach</span></p>
+              <h3 data-i18n="act.3.title">Hands-on satellite navigation at the Pingye Science Festival</h3>
+              <p><span data-i18n="act.3.body">GNSS outreach at National Pingtung University of Science and Technology.</span> <a class="ext-link" href="https://news.npust.edu.tw/2026/11/04/focus2847/"><span data-i18n="act.3.link">University coverage</span> <span aria-hidden="true">→</span></a></p>
             </li>
           </ul>
         </div>
@@ -379,13 +474,13 @@
       <section class="students" id="students" tabindex="-1" aria-labelledby="students-title">
         <div class="wrap students-inner">
           <div>
-            <p class="eyebrow">WORK WITH ME</p>
-            <h2 id="students-title">Prospective students &amp; collaborators</h2>
-            <p class="lede">I welcome inquiries from students who want to build, measure, and explain how their systems work.</p>
+            <p class="eyebrow"><span data-i18n="stu.eyebrow">WORK WITH ME</span></p>
+            <h2 id="students-title" data-i18n="stu.title">Prospective students &amp; collaborators</h2>
+            <p class="lede" data-i18n="stu.lede">I welcome inquiries from students who want to build, measure, and explain how their systems work.</p>
           </div>
           <div class="contact-actions">
             <a class="contact-link" href="mailto:francischen@go.isu.edu.tw">
-              <strong>University email</strong>
+              <strong data-i18n="stu.email">University email</strong>
               <span>francischen@go.isu.edu.tw</span>
             </a>
             <a class="contact-link" href="https://orcid.org/0000-0003-4514-1504" rel="me">
@@ -400,29 +495,29 @@
     <footer class="site-footer" role="contentinfo">
       <div class="wrap footer-grid">
         <div>
-          <p class="footer-name">Chien-Hung Chen</p>
+          <p class="footer-name" data-i18n="footer.name">Chien-Hung Chen</p>
           <p>
-            Professor of Electronic Engineering<br>
-            Department of Electronic Engineering<br>
-            College of Intelligent Science and Technology<br>
-            I-Shou University, Taiwan
+            <span data-i18n="hero.role">Professor of Electronic Engineering</span><br>
+            <span data-i18n="hero.aff1">Department of Electronic Engineering</span><br>
+            <span data-i18n="hero.aff2">College of Intelligent Science and Technology</span><br>
+            <span data-i18n="footer.uni">I-Shou University, Taiwan</span>
           </p>
         </div>
         <div>
           <p><a href="mailto:francischen@go.isu.edu.tw">francischen@go.isu.edu.tw</a></p>
           <p><a href="https://orcid.org/0000-0003-4514-1504" rel="me">orcid.org/0000-0003-4514-1504</a></p>
-          <p>IEEE Senior Member</p>
-          <p>Chair, IEEE AP-S Tainan Chapter (2025–2026)</p>
+          <p data-i18n="chip.ieee">IEEE Senior Member</p>
+          <p data-i18n="chip.chair">Chair, IEEE AP-S Tainan Chapter (2025–2026)</p>
         </div>
         <div>
-          <p>&copy; Copyright 2026 Chien-Hung Chen.</p>
+          <p data-i18n="footer.copy">&copy; Copyright 2026 Chien-Hung Chen.</p>
           <nav class="footer-nav" aria-label="Footer">
-            <a href="#about">About</a>
-            <a href="#research">Research</a>
-            <a href="#publications">Publications</a>
-            <a href="#awards">Awards</a>
-            <a href="#activities">Activities</a>
-            <a href="#students">Students</a>
+            <a href="#about"><span data-i18n="nav.about">About</span></a>
+            <a href="#research"><span data-i18n="nav.research">Research</span></a>
+            <a href="#publications"><span data-i18n="nav.publications">Publications</span></a>
+            <a href="#awards"><span data-i18n="nav.awards">Awards</span></a>
+            <a href="#activities"><span data-i18n="nav.activities">Activities</span></a>
+            <a href="#students"><span data-i18n="nav.students">Students</span></a>
           </nav>
         </div>
       </div>
@@ -441,6 +536,387 @@
     </noscript>
     <script>
       (function () {
+        var STRINGS = {
+          en: {
+            "skip": "Skip to content",
+            "nav.menu": "Menu",
+            "nav.about": "About",
+            "nav.research": "Research",
+            "nav.publications": "Publications",
+            "nav.awards": "Awards",
+            "nav.activities": "Activities",
+            "nav.students": "Students",
+            "theme.label": "Switch to dark theme",
+            "theme.labelDark": "Switch to light theme",
+            "hero.eyebrow": "I-SHOU UNIVERSITY · TAIWAN",
+            "hero.name": "Chien-Hung<br>Chen",
+            "hero.role": "Professor of Electronic Engineering",
+            "hero.aff1": "Department of Electronic Engineering",
+            "hero.aff2": "College of Intelligent Science and Technology",
+            "hero.aff3": "I-Shou University",
+            "chip.ieee": "IEEE Senior Member",
+            "chip.chair": "Chair, IEEE AP-S Tainan Chapter (2025–2026)",
+            "hero.bio": "I develop and measure antennas and radar sensing systems, and teach students how to take an engineering idea from simulation to experiment.",
+            "btn.email": "Email",
+            "btn.print": "Print CV",
+            "btn.research": "Research",
+            "link.pubs": "Selected publications",
+            "link.awards": "Honors & awards",
+            "fig.label": "FIG. 01",
+            "fig.caption": "Conceptual antenna radiation pattern",
+            "research.eyebrow": "AREAS OF WORK",
+            "research.title": "Research & teaching",
+            "research.design": "01 / DESIGN",
+            "research.ant.title": "Antennas & Electromagnetics",
+            "research.ant.body": "Compact, wearable, and integrated antennas, with an emphasis on measured performance.",
+            "research.sense": "02 / SENSE",
+            "research.radar.title": "Radar & Non-contact Sensing",
+            "research.radar.body": "Signal processing and measurement methods for assessing when a non-contact reading is reliable.",
+            "research.teach": "03 / TEACH",
+            "research.edu.title": "Engineering Education",
+            "research.edu.body": "Hands-on learning that takes students from simulation to prototyping and measurement.",
+            "research.jump": "Related paper",
+            "hl.eyebrow": "NOVEMBER 2026",
+            "hl.title": "Recent highlights",
+            "filter.all": "All",
+            "filter.awards": "Awards",
+            "filter.service": "Teaching & Service",
+            "filter.outreach": "Outreach",
+            "filter.label": "Filter",
+            "date.short25": "25 NOV",
+            "date.short21": "21 NOV",
+            "date.short08": "08 NOV",
+            "date.nov25": "25 November 2026",
+            "date.nov21": "21 November 2026",
+            "date.nov8": "8 November 2026",
+            "date.nov22": "22 November 2026",
+            "date.nov1": "1 November 2026",
+            "hl.1": "Third place at I-Shou University’s entrepreneurial innovation competition",
+            "hl.2": "Outstanding Poster Paper Award for collaborative UHF RFID research",
+            "hl.3": "Two faculty-advised teams recognized at the Shield Cup",
+            "pub.eyebrow": "Publications",
+            "pub.title": "Selected publications",
+            "pub.lede": "Selected peer-reviewed work.",
+            "pub.bib": "BibTeX",
+            "pub.copy": "Copy BibTeX",
+            "pub.copied": "Copied",
+            "badge.edu": "Engineering education",
+            "badge.radar": "Radar signal processing",
+            "badge.ant": "Antennas",
+            "award.eyebrow": "Awards",
+            "award.title": "Honors & awards",
+            "award.lede": "Recent team and research honors.",
+            "badge.third": "Third Place",
+            "badge.distinction": "Distinction",
+            "badge.best": "Best Paper",
+            "badge.creativity": "Creativity",
+            "award.1.place": "I-Shou University",
+            "award.1.title": "Third Place · Entrepreneurial Innovation Competition",
+            "award.1.body": "創義盃｜創新商品永續營運組第三名。義起守護團隊以「義呼百應」非接觸式呼吸感測參賽。",
+            "award.2.place": "Research",
+            "award.2.title": "Outstanding Poster Paper Award",
+            "award.2.body": "第一屆產業轉型與創新實踐論文獎｜海報論文優良獎。義守大學與高科大合作，研究黃銅閥件與管件的 UHF RFID。",
+            "award.3.place": "National Cheng Kung University",
+            "award.3.title": "Best Paper Award and Creativity Award · Shield Cup",
+            "award.3.text": "Faculty adviser to two teams: <span lang=\"zh-Hant\">鯤島識舟</span> (Best Paper) and Falcon Wing (Creativity Award).",
+            "award.3.link": "Public award coverage",
+            "act.eyebrow": "Recent",
+            "act.title": "Activities",
+            "act.lede": "Academic service and student outreach.",
+            "badge.teach": "Teaching",
+            "badge.ieee": "IEEE Service",
+            "badge.out": "Outreach",
+            "act.1.kind": "Student learning",
+            "act.1.title": "Semiconductor research institute visit",
+            "act.1.body": "First-year electronic engineering students visited the Taiwan Semiconductor Research Institute.",
+            "act.2.kind": "Academic service",
+            "act.2.title": "IEEE AP-S Tainan Chapter Annual General Meeting",
+            "act.2.body": "Annual chapter gathering at National Sun Yat-sen University.",
+            "act.2.link": "IEEE event page",
+            "act.3.kind": "Science outreach",
+            "act.3.title": "Hands-on satellite navigation at the Pingye Science Festival",
+            "act.3.body": "GNSS outreach at National Pingtung University of Science and Technology.",
+            "act.3.link": "University coverage",
+            "stu.eyebrow": "WORK WITH ME",
+            "stu.title": "Prospective students & collaborators",
+            "stu.lede": "I welcome inquiries from students who want to build, measure, and explain how their systems work.",
+            "stu.email": "University email",
+            "footer.name": "Chien-Hung Chen",
+            "footer.uni": "I-Shou University, Taiwan",
+            "footer.copy": "© Copyright 2026 Chien-Hung Chen."
+          },
+          zh: {
+            "skip": "跳至內容",
+            "nav.menu": "選單",
+            "nav.about": "簡介",
+            "nav.research": "研究",
+            "nav.publications": "著作",
+            "nav.awards": "榮譽",
+            "nav.activities": "活動",
+            "nav.students": "學生",
+            "theme.label": "切換為深色",
+            "theme.labelDark": "切換為淺色",
+            "hero.eyebrow": "義守大學 · 臺灣",
+            "hero.name": "陳建宏",
+            "hero.role": "電子工程學系教授",
+            "hero.aff1": "電子工程學系",
+            "hero.aff2": "智慧科技學院",
+            "hero.aff3": "義守大學",
+            "chip.ieee": "IEEE 資深會員",
+            "chip.chair": "IEEE AP-S 臺南分會主席（2025–2026）",
+            "hero.bio": "我設計並量測天線與雷達感測系統，也教學生把一個工程構想從模擬做到實驗。",
+            "btn.email": "電子郵件",
+            "btn.print": "列印履歷",
+            "btn.research": "研究",
+            "link.pubs": "精選著作",
+            "link.awards": "榮譽與獎項",
+            "fig.label": "圖 01",
+            "fig.caption": "概念性天線輻射場型",
+            "research.eyebrow": "研究領域",
+            "research.title": "研究與教學",
+            "research.design": "01 / 設計",
+            "research.ant.title": "天線與電磁",
+            "research.ant.body": "小型化、穿戴式與整合型天線，以實測性能為準。",
+            "research.sense": "02 / 感測",
+            "research.radar.title": "雷達與非接觸感測",
+            "research.radar.body": "用訊號處理與量測方法，判斷一次非接觸讀值何時可靠。",
+            "research.teach": "03 / 教學",
+            "research.edu.title": "工程教育",
+            "research.edu.body": "從模擬、試作到量測的實作學習。",
+            "research.jump": "相關著作",
+            "hl.eyebrow": "2026年11月",
+            "hl.title": "近期重點",
+            "filter.all": "全部",
+            "filter.awards": "榮譽",
+            "filter.service": "教學與服務",
+            "filter.outreach": "推廣",
+            "filter.label": "篩選",
+            "date.short25": "11月25日",
+            "date.short21": "11月21日",
+            "date.short08": "11月8日",
+            "date.nov25": "2026年11月25日",
+            "date.nov21": "2026年11月21日",
+            "date.nov8": "2026年11月8日",
+            "date.nov22": "2026年11月22日",
+            "date.nov1": "2026年11月1日",
+            "hl.1": "義守大學創意盃第三名（義起守護／義呼百應）",
+            "hl.2": "首屆產業轉型與創新實務論文獎海報論文優良獎，UHF RFID 合作研究",
+            "hl.3": "神盾盃：鯤島識舟獲最佳論文獎，Falcon Wing 獲陳展創意獎",
+            "pub.eyebrow": "著作",
+            "pub.title": "精選著作",
+            "pub.lede": "精選同儕審查著作。",
+            "pub.bib": "BibTeX",
+            "pub.copy": "複製 BibTeX",
+            "pub.copied": "已複製",
+            "badge.edu": "工程教育",
+            "badge.radar": "雷達訊號處理",
+            "badge.ant": "天線",
+            "award.eyebrow": "榮譽",
+            "award.title": "榮譽與獎項",
+            "award.lede": "近期團隊與研究榮譽。",
+            "badge.third": "第三名",
+            "badge.distinction": "優良",
+            "badge.best": "最佳論文",
+            "badge.creativity": "創意",
+            "award.1.place": "義守大學",
+            "award.1.title": "義守大學創意盃第三名",
+            "award.1.body": "義起守護團隊以「義呼百應」非接觸式呼吸感測，參加創新商品永續營運組，獲得第三名。",
+            "award.2.place": "研究",
+            "award.2.title": "首屆產業轉型與創新實務論文獎｜海報論文優良獎",
+            "award.2.body": "義守大學與高科大合作，研究黃銅閥件與管件的 UHF RFID。",
+            "award.3.place": "國立成功大學",
+            "award.3.title": "神盾盃最佳論文獎與陳展創意獎",
+            "award.3.text": "指導兩隊：<span lang=\"zh-Hant\">鯤島識舟</span>獲神盾盃 AI 研討會最佳論文獎；Falcon Wing 獲神盾盃國防 AI 競賽與陳展創意獎。",
+            "award.3.link": "公開報導",
+            "act.eyebrow": "近期",
+            "act.title": "活動",
+            "act.lede": "學術服務與學生推廣。",
+            "badge.teach": "教學",
+            "badge.ieee": "IEEE 服務",
+            "badge.out": "推廣",
+            "act.1.kind": "學生學習",
+            "act.1.title": "半導體研究機構參訪",
+            "act.1.body": "電子工程系一年級學生參訪台灣半導體研究中心。",
+            "act.2.kind": "學術服務",
+            "act.2.title": "IEEE AP-S 臺南分會會員大會",
+            "act.2.body": "於國立中山大學舉行的年度分會聚會。",
+            "act.2.link": "IEEE 活動頁面",
+            "act.3.kind": "科學推廣",
+            "act.3.title": "屏科大科學節：動手做衛星導航",
+            "act.3.body": "於國立屏東科技大學進行全球導航衛星系統（GNSS）推廣。",
+            "act.3.link": "學校報導",
+            "stu.eyebrow": "與我合作",
+            "stu.title": "未來的學生與合作者",
+            "stu.lede": "歡迎想親手做出系統、量測它，並且把原理說清楚的同學與合作者來信。",
+            "stu.email": "學校信箱",
+            "footer.name": "陳建宏",
+            "footer.uni": "義守大學，臺灣",
+            "footer.copy": "© Copyright 2026 陳建宏"
+          }
+        };
+
+        var lang = "en";
+        var theme = "light";
+
+        function dict() {
+          return STRINGS[lang] || STRINGS.en;
+        }
+
+        function applyLang() {
+          var pack = dict();
+          document.documentElement.lang = lang === "zh" ? "zh-Hant" : "en";
+          document.documentElement.setAttribute("data-lang", lang);
+          document.querySelectorAll("[data-i18n]").forEach(function (el) {
+            var key = el.getAttribute("data-i18n");
+            if (!pack[key]) return;
+            el.textContent = pack[key];
+            var keep = el.getAttribute("data-i18n-keep-lang");
+            if (keep) el.setAttribute("lang", keep);
+            else if (lang === "zh") el.setAttribute("lang", "zh-Hant");
+            else el.removeAttribute("lang");
+          });
+          document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+            var key = el.getAttribute("data-i18n-html");
+            if (!pack[key]) return;
+            el.innerHTML = pack[key];
+            if (lang === "zh") el.setAttribute("lang", "zh-Hant");
+            else el.removeAttribute("lang");
+          });
+          document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+            button.setAttribute("aria-pressed", button.getAttribute("data-set-lang") === lang ? "true" : "false");
+          });
+          var filterBar = document.querySelector(".filter-bar");
+          if (filterBar) filterBar.setAttribute("aria-label", pack["filter.label"]);
+          var langSwitch = document.querySelector(".lang-switch");
+          if (langSwitch) langSwitch.setAttribute("aria-label", lang === "zh" ? "語言" : "Language");
+          document.title = lang === "zh"
+            ? "陳建宏｜義守大學電子工程學系教授"
+            : "Chien-Hung Chen | Professor of Electronic Engineering, I-Shou University";
+          applyThemeLabel();
+        }
+
+        function applyThemeLabel() {
+          var button = document.querySelector(".theme-toggle");
+          if (!button) return;
+          var label = button.querySelector("[data-i18n]");
+          var key = theme === "dark" ? "theme.labelDark" : "theme.label";
+          if (label) label.textContent = dict()[key];
+          button.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+          var color = document.querySelector('meta[name="theme-color"]');
+          if (color) color.setAttribute("content", theme === "dark" ? "#101c26" : "#f3eee4");
+        }
+
+        function applyTheme() {
+          document.documentElement.setAttribute("data-theme", theme);
+          try { localStorage.setItem("francis-theme", theme); } catch (err) {}
+          applyThemeLabel();
+        }
+
+        try {
+          theme = document.documentElement.getAttribute("data-theme") || "light";
+          lang = document.documentElement.getAttribute("data-lang") || "en";
+          if (lang !== "zh") lang = "en";
+        } catch (err) {
+          theme = "light";
+          lang = "en";
+        }
+        applyLang();
+
+        document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+          button.addEventListener("click", function () {
+            lang = button.getAttribute("data-set-lang") === "zh" ? "zh" : "en";
+            try { localStorage.setItem("francis-lang", lang); } catch (err) {}
+            applyLang();
+          });
+        });
+
+        var themeButton = document.querySelector(".theme-toggle");
+        if (themeButton) {
+          themeButton.addEventListener("click", function () {
+            theme = theme === "dark" ? "light" : "dark";
+            applyTheme();
+          });
+        }
+
+        document.querySelectorAll(".js-print").forEach(function (button) {
+          button.addEventListener("click", function () {
+            window.print();
+          });
+        });
+
+        function legacyCopy(text) {
+          var area = document.createElement("textarea");
+          area.value = text;
+          area.setAttribute("readonly", "");
+          area.style.position = "fixed";
+          area.style.top = "0";
+          area.style.left = "0";
+          area.style.opacity = "0";
+          document.body.appendChild(area);
+          area.focus();
+          area.select();
+          var ok = false;
+          try { ok = document.execCommand("copy"); } catch (err) { ok = false; }
+          document.body.removeChild(area);
+          return ok;
+        }
+
+        document.querySelectorAll(".bib-copy").forEach(function (button) {
+          button.addEventListener("click", function () {
+            var code = button.parentNode.querySelector("code");
+            if (!code) return;
+            var text = code.textContent || "";
+            var settled = false;
+            function finish(ok) {
+              if (settled || !ok) return;
+              settled = true;
+              button.classList.add("is-copied");
+              button.textContent = dict()["pub.copied"];
+              window.setTimeout(function () {
+                button.classList.remove("is-copied");
+                button.textContent = dict()["pub.copy"];
+                if (lang === "zh") button.setAttribute("lang", "zh-Hant");
+              }, 1600);
+            }
+            finish(legacyCopy(text));
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard.writeText(text).then(function () { finish(true); }, function () {});
+            }
+          });
+        });
+
+        var filterKey = "all";
+        function applyFilter(key) {
+          filterKey = key;
+          document.querySelectorAll("[data-filter]").forEach(function (el) {
+            var show = key === "all" || el.getAttribute("data-filter") === key;
+            el.classList.toggle("is-filtered", !show);
+          });
+          document.querySelectorAll("[data-filter-key]").forEach(function (chip) {
+            chip.setAttribute("aria-pressed", chip.getAttribute("data-filter-key") === key ? "true" : "false");
+          });
+        }
+        function revealHash() {
+          var id = (location.hash || "").slice(1);
+          if (!id) return;
+          var primary = { about: 1, research: 1, publications: 1, awards: 1, activities: 1, students: 1, highlights: 1 };
+          if (primary[id]) {
+            applyFilter("all");
+            return;
+          }
+          var target = document.getElementById(id);
+          if (!target) return;
+          var filtered = target.closest("[data-filter]") || (target.hasAttribute("data-filter") ? target : null);
+          if (filtered && filtered.classList.contains("is-filtered")) applyFilter("all");
+        }
+        document.querySelectorAll("[data-filter-key]").forEach(function (chip) {
+          chip.addEventListener("click", function () {
+            applyFilter(chip.getAttribute("data-filter-key"));
+          });
+        });
+        window.addEventListener("hashchange", revealHash);
+        window.addEventListener("beforeprint", function () { applyFilter("all"); });
+
         var header = document.querySelector(".site-header");
         var toggle = document.querySelector(".nav-toggle");
         var navList = document.querySelector(".nav-links");

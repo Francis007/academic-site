@@ -416,6 +416,23 @@
                 <div class="badge-row"><span class="badge badge-third" data-i18n="badge.third">Third Place</span></div>
                 <h3 data-i18n="award.1.title">Third Place · Entrepreneurial Innovation Competition</h3>
                 <p data-i18n="award.1.body" data-i18n-keep-lang="zh-Hant">創義盃｜創新商品永續營運組第三名。義起守護團隊以「義呼百應」非接觸式呼吸感測參賽。</p>
+                <ul class="photo-strip">
+                  <li>
+                    <button type="button" class="photo-open" data-cap-en="Team 義起守護 with the Third Place trophy and award board at the 115年創義盃創新創業競賽, 25 November 2026." data-cap-zh="義起守護團隊於頒獎舞台，手持115年創義盃創新創業競賽創新商品永續營運組第三名獎座與獎金板。">
+                      <img src="images/isu-chuangyi-2026-award.jpg" width="1477" height="1108" alt="Team 義起守護 holding the Third Place award at the 115年創義盃" data-alt-en="Team 義起守護 holding the Third Place award at the 115年創義盃" data-alt-zh="義起守護團隊手持115年創義盃第三名獎座與獎金板" loading="lazy" class="pos-award">
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="photo-open" data-cap-en="Final competition pitch for 義呼百應：毫米波雷達非接觸式呼吸照護監測." data-cap-zh="決賽簡報，「義呼百應：毫米波雷達非接觸式呼吸照護監測」。">
+                      <img src="images/isu-chuangyi-2026-pitch.jpg" width="1477" height="1108" alt="Final pitch for 義呼百應：毫米波雷達非接觸式呼吸照護監測" data-alt-en="Final pitch for 義呼百應：毫米波雷達非接觸式呼吸照護監測" data-alt-zh="義呼百應決賽簡報：毫米波雷達非接觸式呼吸照護監測" loading="lazy" class="pos-pitch">
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="photo-open" data-cap-en="Poster exhibition beside the 義呼百應 project poster." data-cap-zh="「義呼百應」海報展示。">
+                      <img src="images/isu-chuangyi-2026-poster.jpg" width="1108" height="1477" alt="Poster exhibition for the 義呼百應 project" data-alt-en="Poster exhibition for the 義呼百應 project" data-alt-zh="義呼百應海報展示" loading="lazy" class="pos-poster">
+                    </button>
+                  </li>
+                </ul>
               </article>
             </li>
             <li data-filter="awards">
@@ -523,6 +540,14 @@
       </div>
     </footer>
 
+    <dialog class="photo-dialog" id="photo-dialog" aria-labelledby="photo-dialog-caption">
+      <button type="button" class="photo-dialog-close" data-i18n="photo.close">Close</button>
+      <figure>
+        <img id="photo-dialog-img" alt="">
+        <figcaption id="photo-dialog-caption"></figcaption>
+      </figure>
+    </dialog>
+
     <noscript>
       <style>
         @media (max-width: 880px) {
@@ -600,6 +625,7 @@
             "pub.bib": "BibTeX",
             "pub.copy": "Copy BibTeX",
             "pub.copied": "Copied",
+            "photo.close": "Close",
             "badge.edu": "Engineering education",
             "badge.radar": "Radar signal processing",
             "badge.ant": "Antennas",
@@ -699,7 +725,8 @@
             "date.nov8": "2026年11月8日",
             "date.nov22": "2026年11月22日",
             "date.nov1": "2026年11月1日",
-            "hl.1": "義守大學創意盃第三名（義起守護／義呼百應）",
+            "hl.1": "115年創義盃創新創業競賽第三名（創新商品永續營運組，義起守護／義呼百應）",
+            "photo.close": "關閉",
             "hl.2": "首屆產業轉型與創新實務論文獎海報論文優良獎，UHF RFID 合作研究",
             "hl.3": "神盾盃：鯤島識舟獲最佳論文獎，Falcon Wing 獲陳展創意獎",
             "pub.eyebrow": "著作",
@@ -719,8 +746,8 @@
             "badge.best": "最佳論文",
             "badge.creativity": "創意",
             "award.1.place": "義守大學",
-            "award.1.title": "義守大學創意盃第三名",
-            "award.1.body": "義起守護團隊以「義呼百應」非接觸式呼吸感測，參加創新商品永續營運組，獲得第三名。",
+            "award.1.title": "115年創義盃創新創業競賽｜創新商品永續營運組第三名",
+            "award.1.body": "義起守護團隊以「義呼百應：毫米波雷達非接觸式呼吸照護監測」參加115年創義盃創新創業競賽創新商品永續營運組，獲得第三名。",
             "award.2.place": "研究",
             "award.2.title": "首屆產業轉型與創新實務論文獎｜海報論文優良獎",
             "award.2.body": "義守大學與高科大合作，研究黃銅閥件與管件的 UHF RFID。",
@@ -775,6 +802,16 @@
             else if (lang === "zh") el.setAttribute("lang", "zh-Hant");
             else el.removeAttribute("lang");
           });
+          document.querySelectorAll("[data-alt-en]").forEach(function (img) {
+            img.alt = lang === "zh" ? img.getAttribute("data-alt-zh") : img.getAttribute("data-alt-en");
+          });
+          var openPhoto = document.querySelector(".photo-open.is-current");
+          var photoCaption = document.getElementById("photo-dialog-caption");
+          if (openPhoto && photoCaption) {
+            photoCaption.textContent = lang === "zh" ? openPhoto.getAttribute("data-cap-zh") : openPhoto.getAttribute("data-cap-en");
+            var openImg = document.getElementById("photo-dialog-img");
+            if (openImg) openImg.alt = openPhoto.querySelector("img").alt;
+          }
           document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
             var key = el.getAttribute("data-i18n-html");
             if (!pack[key]) return;
@@ -836,6 +873,39 @@
             theme = theme === "dark" ? "light" : "dark";
             applyTheme();
           });
+        }
+
+        var photoDialog = document.getElementById("photo-dialog");
+        var photoDialogImg = document.getElementById("photo-dialog-img");
+        var photoDialogCaption = document.getElementById("photo-dialog-caption");
+        document.querySelectorAll(".photo-open").forEach(function (button) {
+          button.addEventListener("click", function () {
+            var thumb = button.querySelector("img");
+            document.querySelectorAll(".photo-open.is-current").forEach(function (el) {
+              el.classList.remove("is-current");
+            });
+            button.classList.add("is-current");
+            photoDialogImg.src = thumb.getAttribute("src");
+            photoDialogImg.alt = thumb.alt;
+            photoDialogCaption.textContent = lang === "zh" ? button.getAttribute("data-cap-zh") : button.getAttribute("data-cap-en");
+            if (typeof photoDialog.showModal === "function") photoDialog.showModal();
+          });
+        });
+        if (photoDialog) {
+          photoDialog.addEventListener("click", function (event) {
+            if (event.target === photoDialog) photoDialog.close();
+          });
+          photoDialog.addEventListener("close", function () {
+            document.querySelectorAll(".photo-open.is-current").forEach(function (el) {
+              el.classList.remove("is-current");
+            });
+          });
+          var photoClose = photoDialog.querySelector(".photo-dialog-close");
+          if (photoClose) {
+            photoClose.addEventListener("click", function () {
+              photoDialog.close();
+            });
+          }
         }
 
         document.querySelectorAll(".js-print").forEach(function (button) {

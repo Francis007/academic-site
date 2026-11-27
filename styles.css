@@ -1272,6 +1272,7 @@ article[id] {
   .quiet-links,
   .action-row,
   .bib,
+  .photo-dialog,
   .footer-nav,
   .research-card::after {
     display: none !important;
@@ -1593,4 +1594,102 @@ h3[lang="zh-Hant"],
   font-weight: 500;
   letter-spacing: 0.06em;
   line-height: 1.5;
+}
+
+.photo-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.4rem;
+  margin-top: 0.9rem;
+}
+
+.photo-open {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: #101c26;
+  cursor: zoom-in;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.photo-open img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-open img.pos-award {
+  object-position: center 18%;
+}
+
+.photo-open img.pos-pitch {
+  object-position: center 62%;
+}
+
+.photo-open img.pos-poster {
+  object-position: center 16%;
+}
+
+.photo-dialog {
+  width: min(920px, calc(100vw - 2rem));
+  max-height: calc(100vh - 2rem);
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  background: var(--paper-raised);
+  color: var(--ink);
+  overflow: auto;
+}
+
+.photo-dialog::backdrop {
+  background: rgba(12, 22, 30, 0.78);
+}
+
+.photo-dialog figure {
+  margin: 0;
+}
+
+.photo-dialog img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: min(68vh, 720px);
+  object-fit: contain;
+  object-position: center center;
+  background: #101c26;
+}
+
+.photo-dialog figcaption {
+  padding: 0.85rem 1rem 1rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.photo-dialog-close {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  min-width: 44px;
+  min-height: 36px;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--line-strong);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .photo-strip {
+    gap: 0.3rem;
+  }
+
+  .photo-open {
+    aspect-ratio: 3 / 4;
+  }
 }
